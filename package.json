@@ -1,7 +1,7 @@
 {
   "name": "neki.guru",
   "description": "Nikita Galadiy personal website",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": {
     "name": "Nikita Galadiy",
     "email": "dev@neki.guru",
@@ -18,7 +18,7 @@
     "not dead"
   ],
   "scripts": {
-    "lint": "eslint src/**/*.tsx --fix",
+    "lint": "eslint src/**/*.ts src/**/*.tsx --fix",
     "start": "vite",
     "build": "vite build"
   },

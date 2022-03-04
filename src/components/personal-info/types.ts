@@ -1,4 +1,4 @@
 export type SocialContact = {
-    link: string;
-    name: string;
-}
+  link: string;
+  name: string;
+};

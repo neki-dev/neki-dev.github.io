@@ -1,10 +1,10 @@
-@use "sass:color";
 @import "../../defines";
 
 $total-title-size: 28pt;
+$section-background-color: #000;
 
 section.job-history {
-  background: #000;
+  background: $section-background-color;
 
   .total {
     color: #fff;
@@ -66,7 +66,7 @@ section.job-history {
       .period {
         font-size: 11pt;
         line-height: 11pt;
-        background: #06111d;
+        background: $section-background-color;
         padding: 1px 5px;
         margin: -1px 0 0 -5px;
       }
