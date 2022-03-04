@@ -17,7 +17,7 @@ function StackItem({
   const columnSize = (100 / yearsLength);
 
   return (
-    <div className={`stack ${end ? 'inactive' : 'active'}`}>
+    <div className={`stack-item ${end ? 'inactive' : 'active'}`}>
       <div className="info">
         {basic && (
         <span className="status">Main</span>

@@ -1,5 +1,7 @@
 import useScrollProgress from '../../hooks/use-scroll-progress';
 import { SOCIAL_CONTACTS } from './defines';
+import { SocialContact } from './types';
+import ContactItem from './ContactItem';
 
 import './PersonalInfo.scss';
 
@@ -24,11 +26,8 @@ function PersonalInfo() {
             <span className="location">Russia, Saint-Petersburg</span>
           </div>
           <div className="contacts">
-            {SOCIAL_CONTACTS.map((contact) => (
-              <a
-                href={contact.link} target="_blank" className={contact.name.toLocaleLowerCase()}
-                title={contact.name} rel="noreferrer" aria-label={contact.name}
-              />
+            {SOCIAL_CONTACTS.map((contact: SocialContact) => (
+              <ContactItem {...contact} />
             ))}
           </div>
         </div>

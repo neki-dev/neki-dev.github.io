@@ -1,105 +1,103 @@
 @import "../../defines";
 
-section.stack-timeline {
-  .stack {
-    position: relative;
-    color: $color-light;
+.stack-item {
+  position: relative;
+  color: $color-light;
 
-    .info {
-      display: flex;
-      align-items: center;
+  .info {
+    display: flex;
+    align-items: center;
 
-      .status {
+    .status {
+      position: absolute;
+      right: 0;
+      background: rgba(255 255 255 / 10%);
+      font-size: 12px;
+      padding: 1px 4px;
+      color: rgba(255 255 255 / 40%);
+      font-weight: 100;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      margin-right: 10px;
+    }
+
+    .name {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .exp {
+    margin-top: 9px;
+    display: flex;
+    align-items: center;
+
+    .number {
+      font-size: 17px;
+      margin-right: 4px;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 14px;
+    }
+  }
+
+  .timeline {
+    margin-top: 10px;
+    height: 26px;
+
+    .bar {
+      height: 10px;
+      background: rgb(177 154 228 / 40%);
+
+      .container {
+        position: relative;
+      }
+
+      .moment {
         position: absolute;
-        right: 0;
-        background: rgba(255 255 255 / 10%);
-        font-size: 12px;
-        padding: 1px 4px;
-        color: rgba(255 255 255 / 40%);
-        font-weight: 100;
-      }
-
-      .icon {
-        width: 24px;
-        height: 24px;
-        background: #fff;
-        margin-right: 10px;
-      }
-
-      .name {
-        color: #fff;
-        font-weight: bold;
-        font-size: 20px;
-      }
-    }
-
-    .exp {
-      margin-top: 9px;
-      display: flex;
-      align-items: center;
-
-      .number {
-        font-size: 17px;
-        margin-right: 4px;
-        font-weight: bold;
-      }
-
-      .label {
-        font-size: 14px;
-      }
-    }
-
-    .timeline {
-      margin-top: 10px;
-      height: 26px;
-
-      .bar {
         height: 10px;
-        background: rgb(177 154 228 / 40%);
+        background: $color-second;
 
-        .container {
-          position: relative;
-        }
-
-        .moment {
+        span {
           position: absolute;
-          height: 10px;
-          background: $color-second;
+          z-index: 2;
+          font-size: 9px;
+          bottom: -16px;
 
-          span {
+          &::after {
             position: absolute;
-            z-index: 2;
-            font-size: 9px;
-            bottom: -16px;
+            content: "";
+            width: 1px;
+            background: #fff;
+            top: -15px;
+            bottom: 11px;
+          }
+
+          &.beg {
+            left: 0;
+            padding-left: 2px;
+            transform: translateX(-50%);
 
             &::after {
-              position: absolute;
-              content: "";
-              width: 1px;
-              background: #fff;
-              top: -15px;
-              bottom: 11px;
+              left: 50%;
             }
+          }
 
-            &.beg {
-              left: 0;
-              padding-left: 2px;
-              transform: translateX(-50%);
+          &.end {
+            right: 0;
+            padding-right: 2px;
+            transform: translateX(50%);
 
-              &::after {
-                left: 50%;
-              }
-            }
-
-            &.end {
-              right: 0;
-              padding-right: 2px;
-              transform: translateX(50%);
-
-              &::after {
-                right: 50%;
-                margin-right: -1px;
-              }
+            &::after {
+              right: 50%;
+              margin-right: -1px;
             }
           }
         }

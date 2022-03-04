@@ -10,9 +10,9 @@ function PackageItem({
   const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
 
   return (
-    <div className="container">
+    <div className="package-item">
       <a
-        href={link} target="_blank" className="package"
+        href={link} target="_blank" className="container"
         rel="noreferrer"
       >
         <div className="name">{name}</div>

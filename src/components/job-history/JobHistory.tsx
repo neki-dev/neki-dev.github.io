@@ -1,11 +1,10 @@
 import useScrollProgress from '../../hooks/use-scroll-progress';
 import { Job } from './types';
 import { JOB_HISTORY } from './defines';
+import { getTotalWorkExperience } from './helpers';
 import JobItem from './JobItem';
 
 import './JobHistory.scss';
-
-const JOB_START_TIMESTAMP = 1404172800;
 
 function JobHistory() {
   let refSection: HTMLElement;
@@ -23,7 +22,7 @@ function JobHistory() {
           <div>
             Total work experience
             <span>
-              <b>{((Date.now() / 1000 - JOB_START_TIMESTAMP) / 31536000).toFixed(1)}</b>
+              <b>{getTotalWorkExperience()}</b>
               {' '}
               years
             </span>

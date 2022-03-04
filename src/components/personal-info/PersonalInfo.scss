@@ -62,40 +62,6 @@ section.personal-info {
     .contacts {
       margin: 45px -15px -15px;
       max-width: 70%;
-
-      > a {
-        display: inline-block;
-        background: left center no-repeat;
-        background-size: 100%;
-        text-decoration: none;
-        width: 24px;
-        height: 24px;
-        transition: transform 0.2s ease-in-out;
-        position: relative;
-        z-index: 2;
-        margin: 15px;
-
-        &:hover,
-        &:focus {
-          transform: scale(1.4);
-        }
-
-        &.telegram {
-          background-image: url("./images/icons/telegram.svg");
-        }
-
-        &.email {
-          background-image: url("./images/icons/email.svg");
-        }
-
-        &.github {
-          background-image: url("./images/icons/github.svg");
-        }
-
-        &.stackoverflow {
-          background-image: url("./images/icons/stackoverflow.svg");
-        }
-      }
     }
   }
 }
