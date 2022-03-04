@@ -25,7 +25,6 @@ function StackTimeline() {
           <div className="group">
             <div className="grid spaced">
               {group.stacks.map((stack: Stack) => (
-                // eslint-disable-next-line react/jsx-props-no-spreading
                 <StackItem {...stack} range={range} />
               ))}
             </div>

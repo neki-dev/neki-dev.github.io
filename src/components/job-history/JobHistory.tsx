@@ -1,6 +1,7 @@
 import useScrollProgress from '../../hooks/use-scroll-progress';
 import { Job } from './types';
 import { JOB_HISTORY } from './defines';
+import JobItem from './JobItem';
 
 import './JobHistory.scss';
 
@@ -30,12 +31,7 @@ function JobHistory() {
         </div>
         <div className="list">
           {JOB_HISTORY.map((job: Job) => (
-            <div className="job">
-              <div className="period">{job.period}</div>
-              <div className="organization">{job.organization}</div>
-              <div className="position">{job.position}</div>
-              <div className="description">{job.description}</div>
-            </div>
+            <JobItem {...job} />
           ))}
         </div>
       </div>

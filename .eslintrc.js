@@ -17,5 +17,7 @@ module.exports = {
     'jsx-a11y/anchor-has-content': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-max-props-per-line': [1, { "maximum": 3 }],
+    'react/jsx-props-no-spreading': 'off',
+    'sort-imports': ["error", { "ignoreDeclarationSort": true }],
   },
 };

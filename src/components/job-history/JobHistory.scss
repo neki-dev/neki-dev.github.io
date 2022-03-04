@@ -1,10 +1,9 @@
 @import "../../defines";
 
 $total-title-size: 28pt;
-$section-background-color: #000;
 
 section.job-history {
-  background: $section-background-color;
+  background: #000;
 
   .total {
     color: #fff;
@@ -43,54 +42,6 @@ section.job-history {
       left: 0;
       right: 0;
       top: 7px;
-    }
-
-    .job {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-      padding-left: 30px;
-      color: #bbb;
-
-      &::after {
-        position: absolute;
-        content: "";
-        height: 12px;
-        width: 12px;
-        background: #fff;
-        left: 0;
-        top: 2px;
-      }
-
-      .period {
-        font-size: 11pt;
-        line-height: 11pt;
-        background: $section-background-color;
-        padding: 1px 5px;
-        margin: -1px 0 0 -5px;
-      }
-
-      .organization {
-        font-weight: bold;
-        font-size: 24pt;
-        line-height: 24pt;
-        margin: 10px 0;
-        color: $color-second;
-      }
-
-      .position {
-        font-size: 14pt;
-        line-height: 14pt;
-        color: #fff;
-      }
-
-      .description {
-        font-size: 11pt;
-        line-height: 10pt;
-        font-weight: 100;
-        margin-top: 6px;
-      }
     }
   }
 }
