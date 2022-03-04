@@ -1,0 +1,21 @@
+@import "../../defines";
+
+.map {
+  position: relative;
+  user-select: none;
+  margin: 5% 10%;
+
+  path {
+    fill: #fff;
+    stroke: #555;
+    stroke-width: 0.5px;
+
+    &.passing {
+      fill: rgb(186 223 197);
+    }
+
+    &.visited {
+      fill: rgb(75 190 85);
+    }
+  }
+}

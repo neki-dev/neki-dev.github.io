@@ -1,0 +1,174 @@
+@use "sass:color";
+@import "../../defines";
+
+$logotype-size: 80px;
+
+section.personal-info {
+  height: 100vh;
+  background: #fff url("./images/background.png") center top no-repeat;
+  background-size: auto 100vh;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  > .wrapper {
+    height: 100%;
+  }
+
+  .me {
+    position: absolute;
+    left: 40%;
+    right: 0;
+    bottom: 0;
+    top: 12%;
+    background: url("./images/me.png") left top no-repeat;
+    background-size: 100%;
+    pointer-events: none;
+  }
+
+  .content {
+    padding-top: 7%;
+
+    .logotype {
+      width: $logotype-size * 5.11;
+      height: $logotype-size;
+      background: url("./images/logotype.svg") no-repeat;
+      background-size: 100%;
+    }
+
+    .name {
+      margin: 40px 0 0 -3px;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 60pt;
+        line-height: 60pt;
+        margin-left: -3px;
+      }
+
+      h2 {
+        font-size: 30pt;
+        line-height: 30pt;
+        font-weight: 100;
+      }
+
+      .location {
+        font-size: 16pt;
+        line-height: 16pt;
+        margin: 3px 0 0 2px;
+        font-weight: 100;
+      }
+    }
+
+    .contacts {
+      margin: 45px -15px -15px;
+      max-width: 70%;
+
+      > a {
+        display: inline-block;
+        background: left center no-repeat;
+        background-size: 100%;
+        text-decoration: none;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.2s ease-in-out;
+        position: relative;
+        z-index: 2;
+        margin: 15px;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.4);
+        }
+
+        &.telegram {
+          background-image: url("./images/icons/telegram.svg");
+        }
+
+        &.email {
+          background-image: url("./images/icons/email.svg");
+        }
+
+        &.github {
+          background-image: url("./images/icons/github.svg");
+        }
+
+        &.stackoverflow {
+          background-image: url("./images/icons/stackoverflow.svg");
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.personal-info {
+    background-position: center 100px;
+
+    .me {
+      top: 8%;
+      background-position-y: bottom;
+      background-size: auto 100%;
+    }
+
+    .content {
+      max-width: 50%;
+      padding-top: 10%;
+
+      .logotype {
+        width: $logotype-size * 5.11 * 0.8;
+        height: $logotype-size * 0.8;
+      }
+
+      .name {
+        h1 {
+          font-size: 50pt;
+          line-height: 40pt;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-size: 26pt;
+          line-height: 26pt;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.personal-info {
+    .me {
+      left: 45%;
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.personal-info {
+    height: auto;
+
+    .me {
+      opacity: 0.15;
+      left: 30%;
+      bottom: -10%;
+      background-size: auto 100%;
+    }
+
+    .content {
+      max-width: none;
+      position: relative;
+      z-index: 2;
+      padding-bottom: 7%;
+
+      .logotype {
+        width: $logotype-size * 5.11 * 0.6;
+        height: $logotype-size * 0.6;
+      }
+
+      .contacts {
+        max-width: none;
+      }
+    }
+  }
+}

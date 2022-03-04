@@ -1,0 +1,166 @@
+@use "sass:color";
+@import "../../defines";
+
+$total-title-size: 28pt;
+
+section.job-history {
+  background: #000;
+
+  .total {
+    color: #fff;
+    font-size: $total-title-size;
+    line-height: $total-title-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 9%;
+
+    span {
+      display: flex;
+      align-items: flex-start;
+      font-size: $total-title-size * 0.9;
+      line-height: $total-title-size * 0.9;
+
+      b {
+        font-size: $total-title-size * 1.5;
+        line-height: $total-title-size * 1.5;
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    grid-gap: 5vw 3vw;
+    margin-bottom: 4%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background: #444;
+      left: 0;
+      right: 0;
+      top: 7px;
+    }
+
+    .job {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      padding-left: 30px;
+      color: #bbb;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        background: #fff;
+        left: 0;
+        top: 2px;
+      }
+
+      .period {
+        font-size: 11pt;
+        line-height: 11pt;
+        background: #06111d;
+        padding: 1px 5px;
+        margin: -1px 0 0 -5px;
+      }
+
+      .organization {
+        font-weight: bold;
+        font-size: 24pt;
+        line-height: 24pt;
+        margin: 10px 0;
+        color: $color-second;
+      }
+
+      .position {
+        font-size: 14pt;
+        line-height: 14pt;
+        color: #fff;
+      }
+
+      .description {
+        font-size: 11pt;
+        line-height: 10pt;
+        font-weight: 100;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.job-history {
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .total {
+      font-size: $total-title-size * 0.9;
+      line-height: $total-title-size * 0.9;
+
+      span {
+        font-size: $total-title-size * 0.9 * 0.9;
+        line-height: $total-title-size * 0.9 * 0.9;
+
+        b {
+          font-size: $total-title-size * 1.5 * 0.9;
+          line-height: $total-title-size * 1.5 * 0.9;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.job-history {
+    .total {
+      font-size: $total-title-size * 0.8;
+      line-height: $total-title-size * 0.8;
+
+      span {
+        font-size: $total-title-size * 0.9 * 0.8;
+        line-height: $total-title-size * 0.9 * 0.8;
+
+        b {
+          font-size: $total-title-size * 1.5 * 0.8;
+          line-height: $total-title-size * 1.5 * 0.8;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.job-history {
+    .list {
+      grid-template-columns: 1fr;
+      grid-gap: 7vw;
+    }
+
+    .total {
+      font-size: $total-title-size * 0.7;
+      line-height: $total-title-size * 0.7;
+
+      span {
+        font-size: $total-title-size * 0.9 * 0.7;
+        line-height: $total-title-size * 0.9 * 0.7;
+
+        b {
+          font-size: $total-title-size * 1.5 * 0.7;
+          line-height: $total-title-size * 1.5 * 0.7;
+        }
+      }
+    }
+  }
+}

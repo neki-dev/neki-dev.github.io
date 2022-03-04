@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": "./",
+    "outDir": "app/",
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/*.tsx",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

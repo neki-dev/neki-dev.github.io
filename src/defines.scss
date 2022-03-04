@@ -1,0 +1,17 @@
+@mixin screen($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+// Colors
+$color-main: #6c4091;
+$color-second: #b19ae4;
+$color-light: #d8c6ff;
+$color-dark: #150e1c;
+$color-dark-dim: #202f41;
+
+// Screen sizes
+$media-size-s: 560px;
+$media-size-m: 900px;
+$media-size-l: 1200px;

@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /data/
+
+Host: neki.guru

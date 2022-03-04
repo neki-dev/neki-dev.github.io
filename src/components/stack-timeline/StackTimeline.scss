@@ -1,0 +1,26 @@
+@import "../../defines";
+
+section.stack-timeline {
+  background: #081422;
+
+  > .wrapper > h4 {
+    color: #fff;
+    border-color: #28394e;
+  }
+
+  .group {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.stack-timeline {
+    .group {
+      &:not(:last-child) {
+        margin-bottom: 10%;
+      }
+    }
+  }
+}

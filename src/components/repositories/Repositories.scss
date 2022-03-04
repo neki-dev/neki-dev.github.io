@@ -1,0 +1,113 @@
+@use "sass:color";
+@import "../../defines";
+
+$repository-name-size: 18pt;
+
+section.packages {
+  background: #efebf8;
+
+  .container {
+    position: relative;
+
+    .package {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      height: 100%;
+      background: rgba(255 255 255 / 40%);
+      padding: 20px 25px;
+
+      .name {
+        margin-bottom: 10px;
+        color: $color-main;
+        font-weight: bold;
+        font-size: $repository-name-size;
+        line-height: $repository-name-size;
+        text-transform: lowercase;
+        white-space: nowrap;
+      }
+
+      .description {
+        color: color.adjust($color-dark, $lightness: 10%);
+        flex: 1;
+        font-size: 11pt;
+        line-height: 11pt;
+      }
+
+      .langs {
+        margin: 10px 0 5px;
+
+        > span {
+          background: #fff;
+          color: $color-second;
+          display: inline-block;
+          padding: 2px 4px;
+          font-size: 8pt;
+          line-height: 8pt;
+          text-transform: uppercase;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+
+          &.type {
+            color: #aaa;
+            background: #eee;
+
+            &.lib {
+              color: #87cfff;
+              background: color.adjust(#87cfff, $lightness: 21%);
+            }
+
+            &.framework {
+              color: #98d485;
+              background: color.adjust(#98d485, $lightness: 29%);
+            }
+
+            &.game {
+              color: #d1759e;
+              background: color.adjust(#d1759e, $lightness: 33%);
+            }
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        background: rgba(255 255 255 / 60%);
+
+        .name,
+        .description {
+          color: $color-dark;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.packages {
+    .container .package .name {
+      font-size: $repository-name-size * 0.95;
+      line-height: $repository-name-size * 0.95;
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.packages {
+    .container .package .name {
+      font-size: $repository-name-size * 0.9;
+      line-height: $repository-name-size * 0.9;
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.packages {
+    .container .package .name {
+      font-size: $repository-name-size * 0.8;
+      line-height: $repository-name-size * 0.8;
+    }
+  }
+}

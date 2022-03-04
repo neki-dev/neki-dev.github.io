@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;700&display=swap");
+@import "./defines";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background: #fff;
+  color: $color-dark;
+  font: 14px "Readex Pro", Arial, Tahoma, serif;
+  overflow-x: hidden;
+}
+
+/**
+ * Section
+ */
+
+$section-title-size: 30pt;
+$section-wrapper-max-width: 1300px;
+$section-wrapper-padding: 10%;
+
+section {
+  overflow: hidden;
+
+  // Content wrapper
+  > .wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: calc($section-wrapper-max-width + $section-wrapper-padding);
+    padding: $section-wrapper-padding;
+
+    // Title
+    > h4 {
+      font-size: $section-title-size;
+      line-height: $section-title-size;
+      text-transform: uppercase;
+      margin-bottom: 9%;
+      display: block;
+      border-bottom: 1px solid $color-light;
+      padding-bottom: 3%;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section > .wrapper > h4 {
+    font-size: $section-title-size * 0.9;
+    line-height: $section-title-size * 0.9;
+  }
+}
+
+@include screen($media-size-m) {
+  section > .wrapper > h4 {
+    font-size: $section-title-size * 0.8;
+    line-height: $section-title-size * 0.8;
+  }
+}
+
+@include screen($media-size-s) {
+  section > .wrapper > h4 {
+    font-size: $section-title-size * 0.7;
+    line-height: $section-title-size * 0.7;
+  }
+}
+
+/**
+ * Grid
+ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2vw;
+
+  &.spaced {
+    grid-gap: 3vw;
+  }
+}
+
+@include screen($media-size-l) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include screen($media-size-m) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include screen($media-size-s) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
