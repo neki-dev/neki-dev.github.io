@@ -2,7 +2,9 @@ import { SocialContact } from './types';
 
 import './ContactItem.scss';
 
-function ContactItem({ name, link }: SocialContact) {
+export default function ContactItem({
+  name, link,
+}: SocialContact) {
   return (
     <a
       href={link} target="_blank" className={`contact-item ${name.toLocaleLowerCase()}`}
@@ -10,5 +12,3 @@ function ContactItem({ name, link }: SocialContact) {
     />
   );
 }
-
-export default ContactItem;

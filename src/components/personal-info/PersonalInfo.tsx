@@ -5,7 +5,7 @@ import ContactItem from './ContactItem';
 
 import './PersonalInfo.scss';
 
-function PersonalInfo() {
+export default function PersonalInfo() {
   let refSection: HTMLElement;
   let refContent: HTMLDivElement;
 
@@ -35,5 +35,3 @@ function PersonalInfo() {
     </section>
   );
 }
-
-export default PersonalInfo;

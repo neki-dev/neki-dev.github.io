@@ -9,7 +9,7 @@ type ComponentProps = Stack & {
   }
 };
 
-function StackItem({
+export default function StackItem({
   range, beg, end, name, color, basic,
 }: ComponentProps) {
   const experience = (end || range.end) - beg;
@@ -60,5 +60,3 @@ function StackItem({
     </div>
   );
 }
-
-export default StackItem;

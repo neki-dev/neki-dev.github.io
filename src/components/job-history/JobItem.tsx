@@ -2,7 +2,7 @@ import { Job } from './types';
 
 import './JobItem.scss';
 
-function JobItem({
+export default function JobItem({
   period, organization, position, description,
 }: Job) {
   return (
@@ -14,5 +14,3 @@ function JobItem({
     </div>
   );
 }
-
-export default JobItem;

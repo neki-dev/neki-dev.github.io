@@ -6,7 +6,7 @@ import JobItem from './JobItem';
 
 import './JobHistory.scss';
 
-function JobHistory() {
+export default function JobHistory() {
   let refSection: HTMLElement;
   let refContent: HTMLDivElement;
 
@@ -37,5 +37,3 @@ function JobHistory() {
     </section>
   );
 }
-
-export default JobHistory;

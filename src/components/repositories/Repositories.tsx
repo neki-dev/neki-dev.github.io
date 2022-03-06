@@ -4,7 +4,7 @@ import PackageItem from './PackageItem';
 
 import './Repositories.scss';
 
-function Repositories() {
+export default function Repositories() {
   return (
     <section className="packages" tabIndex="0">
       <div className="wrapper">
@@ -18,5 +18,3 @@ function Repositories() {
     </section>
   );
 }
-
-export default Repositories;

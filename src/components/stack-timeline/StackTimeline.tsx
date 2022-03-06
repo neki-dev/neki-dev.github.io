@@ -4,7 +4,7 @@ import StackItem from './StackItem';
 
 import './StackTimeline.scss';
 
-function StackTimeline() {
+export default function StackTimeline() {
   const range: {
     beg: number;
     end: number;
@@ -34,5 +34,3 @@ function StackTimeline() {
     </section>
   );
 }
-
-export default StackTimeline;

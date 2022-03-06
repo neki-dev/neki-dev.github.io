@@ -4,7 +4,7 @@ import './PackageItem.scss';
 
 const ACCOUNT_USERNAME = 'essle';
 
-function PackageItem({
+export default function PackageItem({
   name, description, type, langs,
 }: Package) {
   const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
@@ -19,7 +19,7 @@ function PackageItem({
         <div className="description">{description}</div>
         <div className="langs">
           <span className={`type ${type}`}>{type}</span>
-          {langs.map((lang) => (
+          {langs.map((lang: string) => (
             <span>{lang}</span>
           ))}
         </div>
@@ -27,5 +27,3 @@ function PackageItem({
     </div>
   );
 }
-
-export default PackageItem;
