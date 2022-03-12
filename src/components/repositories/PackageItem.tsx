@@ -2,7 +2,7 @@ import { Package } from './types';
 
 import './PackageItem.scss';
 
-const ACCOUNT_USERNAME = 'essle';
+const ACCOUNT_USERNAME = 'neki-dev';
 
 export default function PackageItem({
   name, description, type, langs,
