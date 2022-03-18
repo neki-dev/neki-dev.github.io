@@ -1,0 +1,95 @@
+@import "../../defines";
+
+section.merch-gallery {
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 0;
+
+  .selectors {
+    .model-selector {
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: center;
+      font-size: 12pt;
+  
+      .model {
+        &:hover {
+          cursor: pointer;
+          color: $color-dark;
+        }
+        
+        &.active {
+          color: $color-main;
+          text-shadow: 0 0 20px $color-second;
+        }
+  
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  
+    .variant-selector {
+      display: flex;
+      justify-content: center;
+  
+      .variant {
+        &:hover {
+          cursor: pointer;
+        }
+  
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        .box {
+          border: 1px solid #000;
+          width: 4vh;
+          height: 4vh;
+          margin: 0.5vh;
+
+          &.active {
+            // box-shadow: 0 0 0 6px #000;
+            width: 5vh;
+            height: 5vh;
+            margin: 0;
+          }
+  
+          > div {
+            height: 50%;
+
+            &:first-child {
+              border-bottom: 1px solid #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .base {
+    margin: 0 auto;
+    width: 65vh;
+    height: 65vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: background-image 0.1s ease-in;
+
+    .print {
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      transition: background-image 0.1s ease-in;
+    }
+  }
+
+  .print-uuid {
+    text-align: center;
+    color: #aaa;
+    font-weight: 100;
+  }
+}
