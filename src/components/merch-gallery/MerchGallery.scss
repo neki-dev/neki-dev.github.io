@@ -87,6 +87,8 @@ section.merch-gallery {
       width: 100%;
       height: 100%;
       background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
       transition: background-image 0.1s ease-in;
     }
   }
