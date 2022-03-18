@@ -35,12 +35,12 @@ export default function MerchGallery() {
             </div>
           ))}
         </div>
+        <div className="print-uuid">
+          {getPrintUUID(model(), printList[model()][variant()])}
+        </div>
       </div>
       <div className="base" style={{ 'background-image': `url(${printList[model()][variant()].base.url})` }}>
         <div className="print" style={{ 'background-image': `url(${printList[model()][variant()].print.url})` }} />
-      </div>
-      <div className="print-uuid">
-        {getPrintUUID(model(), printList[model()][variant()])}
       </div>
     </section>
   );

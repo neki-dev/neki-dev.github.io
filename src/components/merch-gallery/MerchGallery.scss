@@ -4,57 +4,56 @@ section.merch-gallery {
   background: #fff;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   padding: 60px 0;
 
   .selectors {
+    height: 80vh;
+    margin-right: 50px;
+
     .model-selector {
-      display: flex;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       justify-content: center;
-      font-size: 12pt;
+      font-size: 14pt;
   
       .model {
         &:hover {
           cursor: pointer;
-          color: $color-dark;
+          text-decoration: underline;
         }
         
         &.active {
           color: $color-main;
-          text-shadow: 0 0 20px $color-second;
         }
   
         &:not(:last-child) {
-          margin-right: 30px;
+          margin-bottom: 10px;
         }
       }
     }
   
     .variant-selector {
-      display: flex;
-      justify-content: center;
-  
       .variant {
-        &:hover {
-          cursor: pointer;
-        }
-  
+        overflow: hidden;
+
         &:not(:last-child) {
-          margin-right: 20px;
+          margin-bottom: 10px;
         }
 
         .box {
           border: 1px solid #000;
-          width: 4vh;
-          height: 4vh;
-          margin: 0.5vh;
+          width: 40px;
+          height: 40px;
+          margin: 5px;
+
+          &:hover {
+            cursor: pointer;
+          }
 
           &.active {
-            // box-shadow: 0 0 0 6px #000;
-            width: 5vh;
-            height: 5vh;
+            width: 50px;
+            height: 50px;
             margin: 0;
           }
   
@@ -68,12 +67,17 @@ section.merch-gallery {
         }
       }
     }
+
+    .print-uuid {
+      margin-top: 50px;
+      color: #ccc;
+      font-weight: 100;
+    }
   }
 
   .base {
-    margin: 0 auto;
-    width: 65vh;
-    height: 65vh;
+    width: 80vh;
+    height: 80vh;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -85,11 +89,5 @@ section.merch-gallery {
       background-size: 100%;
       transition: background-image 0.1s ease-in;
     }
-  }
-
-  .print-uuid {
-    text-align: center;
-    color: #aaa;
-    font-weight: 100;
   }
 }

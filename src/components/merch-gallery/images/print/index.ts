@@ -12,8 +12,8 @@ const prints: {
   NEKI: neki,
   'BAD DUCK': badDuck,
   PHNMNN: phnmnn,
-  'AGAIN WRONG': againWrong,
   'AHEAD WITH HEAD': aheadWithHead,
+  'AGAIN WRONG': againWrong,
 };
 
 export default prints;
