@@ -1,10 +1,12 @@
 import { onCleanup, onMount } from 'solid-js';
 
+const MIN_WIDTH_FOR_DETECT = 561;
+
 export default function useScrollProgress(
   sectionFn: () => HTMLElement,
   callback: (progress: number) => void,
 ) {
-  if (window.innerWidth <= 560) {
+  if (window.innerWidth < MIN_WIDTH_FOR_DETECT) {
     return;
   }
 

@@ -16,23 +16,23 @@ section.merch-gallery {
       margin-bottom: 50px;
       justify-content: center;
       font-size: 14pt;
-  
+
       .model {
         &:hover {
           cursor: pointer;
           text-decoration: underline;
         }
-        
+
         &.active {
           color: $color-main;
         }
-  
+
         &:not(:last-child) {
           margin-bottom: 10px;
         }
       }
     }
-  
+
     .variant-selector {
       .variant {
         overflow: hidden;
@@ -56,7 +56,7 @@ section.merch-gallery {
             height: 50px;
             margin: 0;
           }
-  
+
           > div {
             height: 50%;
 

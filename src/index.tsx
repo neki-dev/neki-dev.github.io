@@ -1,4 +1,5 @@
 import { render } from 'solid-js/web';
+import { JSX } from 'solid-js/jsx-runtime';
 
 import './index.scss';
 
@@ -8,7 +9,9 @@ import JobHistory from './components/job-history';
 import Repositories from './components/repositories';
 import MerchGallery from './components/merch-gallery';
 
-const SampleRouter = {
+const SampleRouter: {
+  [key: string]: JSX.Element,
+} = {
   '*': (
     <>
       <PersonalInfo />
