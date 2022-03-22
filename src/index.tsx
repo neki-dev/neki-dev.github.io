@@ -26,7 +26,7 @@ const SampleRouter: {
 };
 
 function ApplicationWrapper() {
-  const route = window.location.search.substring(1);
+  const route = window.location.search.replace(/\?([a-z-]+).*/, '$1');
   return SampleRouter[route] || SampleRouter['*'];
 }
 
