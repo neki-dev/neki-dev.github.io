@@ -1,3 +1,5 @@
-.idea/
+.git
+.idea
 node_modules/
+package-lock.json
 .DS_Store
