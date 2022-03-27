@@ -6,8 +6,8 @@ import './StackTimeline.scss';
 
 export default function StackTimeline() {
   const range: {
-    beg: number;
-    end: number;
+    beg: number
+    end: number
   } = {
     beg: Math.min(
       ...STACK_GROUPS.map((group: StackGroup) => (
@@ -18,7 +18,7 @@ export default function StackTimeline() {
   };
 
   return (
-    <section className="stack-timeline" tabIndex="0">
+    <section className="stack-timeline">
       <div className="wrapper">
         <h4>Development Stack</h4>
         {STACK_GROUPS.map((group: StackGroup) => (

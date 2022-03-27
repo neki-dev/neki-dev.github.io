@@ -6,7 +6,7 @@ import './Repositories.scss';
 
 export default function Repositories() {
   return (
-    <section className="packages" tabIndex="0">
+    <section className="packages">
       <div className="wrapper">
         <h4>Public Repositories</h4>
         <div className="grid">

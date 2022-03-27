@@ -4,8 +4,8 @@ import './StackItem.scss';
 
 type ComponentProps = Stack & {
   range: {
-    beg: number;
-    end: number;
+    beg: number
+    end: number
   }
 };
 

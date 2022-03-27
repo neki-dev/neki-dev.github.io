@@ -20,7 +20,7 @@ export const PACKAGE_LIST: Package[] = [
     name: 'fake-function', type: 'lib', langs: ['JavaScript'], description: 'Fake wrapper for functions',
   },
   {
-    name: 'netbird', type: 'framework', langs: ['PHP'], description: 'Easy website framwork', mark: 'deprecated',
+    name: 'net-bird', type: 'framework', langs: ['PHP'], description: 'Easy website framework', mark: 'deprecated',
   },
   {
     name: 'digital-mask', type: 'lib', langs: ['JavaScript'], description: 'Easy digital mask for string',
@@ -32,3 +32,5 @@ export const PACKAGE_LIST: Package[] = [
     name: 'sip-gateway', type: 'lib', langs: ['JavaScript'], description: 'Simple gateway for SIP via WebSocket',
   },
 ];
+
+export default { PACKAGE_LIST };

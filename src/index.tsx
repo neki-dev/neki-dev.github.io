@@ -10,7 +10,7 @@ import Repositories from './components/repositories';
 import MerchGallery from './components/merch-gallery';
 
 const SampleRouter: {
-  [key: string]: JSX.Element,
+  [key: string]: JSX.Element
 } = {
   '*': (
     <>

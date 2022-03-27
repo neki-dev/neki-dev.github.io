@@ -16,7 +16,7 @@ export default function JobHistory() {
   });
 
   return (
-    <section ref={refSection} className="job-history" tabIndex="0">
+    <section ref={refSection} className="job-history">
       <div ref={refContent} className="wrapper">
         <div className="total">
           <div>

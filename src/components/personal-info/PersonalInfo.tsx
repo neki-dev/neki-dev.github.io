@@ -15,7 +15,7 @@ export default function PersonalInfo() {
   });
 
   return (
-    <section ref={refSection} className="personal-info" tabIndex="0">
+    <section ref={refSection} className="personal-info">
       <div className="wrapper">
         <div className="me" />
         <div ref={refContent} className="content">

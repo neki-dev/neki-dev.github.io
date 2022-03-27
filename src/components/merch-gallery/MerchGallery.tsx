@@ -25,7 +25,7 @@ export default function MerchGallery() {
   }
 
   return (
-    <section className="merch-gallery" tabIndex="0">
+    <section className="merch-gallery">
       <div className="selectors">
         <div className="model-selector">
           {prints.map(({ name }, index) => (
