@@ -24,8 +24,6 @@
   },
   "devDependencies": {
     "@neki-dev/eslint-config": "github:neki-dev/eslint-config",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
     "eslint": "^8.10.0",
     "sass": "^1.44.0",
     "stylelint": "^14.1.0",
