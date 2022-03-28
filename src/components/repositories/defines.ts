@@ -11,7 +11,7 @@ export const PACKAGE_LIST: Package[] = [
     name: 'contrast-arrays', type: 'lib', langs: ['JavaScript'], description: 'Synchronization current array by target array',
   },
   {
-    name: 'uran-engine', type: 'framework', langs: ['JavaScript'], description: 'Browser multiplayer engine', mark: 'deprecated',
+    name: 'uran-engine', type: 'framework', langs: ['JavaScript'], description: 'Browser multiplayer game engine', mark: 'deprecated',
   },
   {
     name: 'react-scrl', type: 'lib', langs: ['JavaScript', 'React'], description: 'Simple and versatile stylized scrollbar',
