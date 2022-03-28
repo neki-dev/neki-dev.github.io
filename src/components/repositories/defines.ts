@@ -48,7 +48,7 @@ export const PACKAGE_LIST: Package[] = [
     name: 'digital-mask',
     type: 'lib',
     langs: ['JavaScript'],
-    description: 'Easy digital mask for string',
+    description: 'Easy digital mask for string and inputs',
   },
   {
     name: 'net-bird',
