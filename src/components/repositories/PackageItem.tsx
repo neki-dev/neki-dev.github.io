@@ -5,7 +5,7 @@ import './PackageItem.scss';
 const ACCOUNT_USERNAME = 'neki-dev';
 
 export default function PackageItem({
-  name, description, type, langs,
+  name, description, type, langs, mark,
 }: Package) {
   const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
 
@@ -16,6 +16,9 @@ export default function PackageItem({
         rel="noreferrer"
       >
         <div className="name">{name}</div>
+        {mark && (
+          <div className="mark">{mark}</div>
+        )}
         <div className="description">{description}</div>
         <div className="langs">
           <span className={`type ${type}`}>{type}</span>
