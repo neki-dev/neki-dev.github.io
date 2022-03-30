@@ -20,13 +20,6 @@ export const PACKAGE_LIST: Package[] = [
     description: 'Get a matching, missing and excess items of an array based on target array',
   },
   {
-    name: 'uran-engine',
-    type: 'framework',
-    langs: ['JavaScript'],
-    description: 'Browser multiplayer game engine',
-    mark: 'deprecated',
-  },
-  {
     name: 'react-scrl',
     type: 'lib',
     langs: ['JavaScript', 'React'],
@@ -42,7 +35,7 @@ export const PACKAGE_LIST: Package[] = [
     name: 'fake-function',
     type: 'lib',
     langs: ['JavaScript'],
-    description: 'Fake wrapper for functions',
+    description: 'Fake function wrapper for tests',
   },
   {
     name: 'digital-mask',
@@ -55,6 +48,13 @@ export const PACKAGE_LIST: Package[] = [
     type: 'framework',
     langs: ['PHP'],
     description: 'Easy website framework',
+    mark: 'deprecated',
+  },
+  {
+    name: 'uran-engine',
+    type: 'framework',
+    langs: ['JavaScript'],
+    description: 'Browser multiplayer game engine',
     mark: 'deprecated',
   },
 ];

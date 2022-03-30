@@ -39,11 +39,9 @@ export default function MerchGallery() {
         </div>
         <div className="variant-selector">
           {prints[model()].variants.map(({ base, print }, index) => (
-            <div className="variant" onClick={() => setVariant(index)}>
-              <div className={`box ${(index === variant()) ? 'active' : ''}`}>
-                <div style={{ 'background-color': base.hex }} />
-                <div style={{ 'background-color': print.hex }} />
-              </div>
+            <div className={`variant ${(index === variant()) ? 'active' : ''}`} onClick={() => setVariant(index)}>
+              <div style={{ 'background-color': base.hex }} />
+              <div style={{ 'background-color': print.hex }} />
             </div>
           ))}
         </div>

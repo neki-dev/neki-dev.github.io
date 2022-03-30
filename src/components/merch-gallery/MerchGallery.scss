@@ -14,10 +14,23 @@ section.merch-gallery {
 
     .model-selector {
       margin-bottom: 50px;
-      justify-content: center;
       font-size: 14pt;
 
       .model {
+        position: relative;
+        padding-left: 14px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "";
+          width: 4px;
+          height: 4px;
+          background: #111;
+        }
+
         &:hover {
           cursor: pointer;
           text-decoration: underline;
@@ -28,41 +41,34 @@ section.merch-gallery {
         }
 
         &:not(:last-child) {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
       }
     }
 
     .variant-selector {
-      .variant {
-        overflow: hidden;
+      display: grid;
+      grid-template-columns: 40px 40px;
+      gap: 15px;
 
-        &:not(:last-child) {
-          margin-bottom: 10px;
+      .variant {
+        border: 1px solid #000;
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+          cursor: pointer;
         }
 
-        .box {
-          border: 1px solid #000;
-          width: 40px;
-          height: 40px;
-          margin: 5px;
+        &.active {
+          border-width: 6px;
+        }
 
-          &:hover {
-            cursor: pointer;
-          }
+        > div {
+          height: 50%;
 
-          &.active {
-            width: 50px;
-            height: 50px;
-            margin: 0;
-          }
-
-          > div {
-            height: 50%;
-
-            &:first-child {
-              border-bottom: 1px solid #000;
-            }
+          &:first-child {
+            border-bottom: 1px solid #000;
           }
         }
       }
@@ -90,6 +96,62 @@ section.merch-gallery {
       background-repeat: no-repeat;
       background-position: center center;
       transition: background-image 0.1s ease-in;
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.merch-gallery {
+    flex-direction: column;
+
+    .selectors {
+      height: auto;
+      width: 100%;
+      display: flex;
+      margin: 0;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+      border-bottom: 1px solid #111;
+
+      .model-selector {
+        flex: 1;
+        margin: 0 50px 0 0;
+
+        .model {
+          font-size: 10pt;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .variant-selector {
+        flex-shrink: 0;
+        grid-template-columns: 25px 25px;
+        gap: 10px;
+
+        .variant {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .print-uuid {
+        margin: 0;
+        position: fixed;
+        bottom: 10px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .base {
+      width: 100%;
+      height: auto;
+      flex: 1;
     }
   }
 }
