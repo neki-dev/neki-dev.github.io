@@ -1,11 +1,10 @@
 import { Package } from './types';
+import { ACCOUNT_USERNAME } from './defines';
 
 import './PackageItem.scss';
 
-const ACCOUNT_USERNAME = 'neki-dev';
-
 export default function PackageItem({
-  name, description, type, langs, mark,
+  name, description, type, lang, forks, likes,
 }: Package) {
   const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
 
@@ -16,15 +15,20 @@ export default function PackageItem({
         rel="noreferrer"
       >
         <div className="name">{name}</div>
-        {mark && (
-          <div className="mark">{mark}</div>
-        )}
-        <div className="description">{description}</div>
-        <div className="langs">
-          <span className={`type ${type}`}>{type}</span>
-          {langs.map((lang: string) => (
-            <span>{lang}</span>
-          ))}
+        <div className="description">
+          {description}
+        </div>
+        <div className="meta">
+          <div className="marks">
+            <span className={`type ${type}`}>{type}</span>
+            {lang && (
+              <span>{lang}</span>
+            )}
+          </div>
+          <div className="data">
+            <div className="count forks">{forks}</div>
+            <div className="count likes">{likes}</div>
+          </div>
         </div>
       </a>
     </div>

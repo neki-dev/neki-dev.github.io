@@ -15,7 +15,7 @@ $repository-name-size: 18pt;
     padding: 20px 25px;
 
     .name {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: $color-main;
       font-weight: bold;
       font-size: $repository-name-size;
@@ -24,56 +24,84 @@ $repository-name-size: 18pt;
       white-space: nowrap;
     }
 
-    .mark {
-      font-size: 9px;
-      text-transform: uppercase;
-      font-weight: 100;
-      color: red;
-      margin-bottom: 6px;
-    }
-
     .description {
       color: color.adjust($color-dark, $lightness: 10%);
       flex: 1;
       font-weight: 100;
-      letter-spacing: 0.2px;
       font-size: 11pt;
       line-height: 11pt;
-    }
-
-    .langs {
-      margin: 10px 0 5px;
 
       > span {
-        background: #fff;
-        color: $color-second;
-        display: inline-block;
-        padding: 2px 4px;
-        font-size: 8pt;
-        line-height: 8pt;
-        text-transform: uppercase;
+        display: block;
+        margin-top: 3px;
+      }
+    }
 
-        &:not(:last-child) {
-          margin-right: 5px;
+    .meta {
+      margin: 15px 0 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid rgba(0 0 0 / 5%);
+
+      .marks {
+        > span {
+          background: #fff;
+          color: $color-second;
+          display: inline-block;
+          padding: 2px 4px;
+          font-size: 8pt;
+          line-height: 8pt;
+          text-transform: uppercase;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+
+          &.type {
+            color: #aaa;
+            background: #eee;
+
+            &.lib {
+              color: #87cfff;
+              background: color.adjust(#87cfff, $lightness: 21%);
+            }
+
+            &.framework {
+              color: #98d485;
+              background: color.adjust(#98d485, $lightness: 29%);
+            }
+
+            &.game {
+              color: #d1759e;
+              background: color.adjust(#d1759e, $lightness: 33%);
+            }
+          }
         }
+      }
 
-        &.type {
-          color: #aaa;
-          background: #eee;
+      .data {
+        margin-left: 10px;
+        display: flex;
 
-          &.lib {
-            color: #87cfff;
-            background: color.adjust(#87cfff, $lightness: 21%);
+        .count {
+          padding-left: 17px;
+          background-repeat: no-repeat;
+          background-size: auto 100%;
+          background-position: left center;
+          color: #777;
+          font-size: 9pt;
+          line-height: 9pt;
+          height: 12px;
+
+          &.forks {
+            background-image: url("./images/icons/fork.svg");
+            margin-right: 10px;
           }
 
-          &.framework {
-            color: #98d485;
-            background: color.adjust(#98d485, $lightness: 29%);
-          }
-
-          &.game {
-            color: #d1759e;
-            background: color.adjust(#d1759e, $lightness: 33%);
+          &.likes {
+            background-image: url("./images/icons/like.svg");
           }
         }
       }
