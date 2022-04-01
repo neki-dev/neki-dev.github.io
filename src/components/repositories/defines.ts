@@ -5,7 +5,7 @@ export const PACKAGE_LIST: Package[] = [
     name: 'dothree',
     type: 'game',
     langs: ['TypeScript', 'React'],
-    description: 'Online logic game',
+    description: 'Logic online game similar to a mixture of tetris and tic-tac-toe',
   },
   {
     name: 'promise-partial',
