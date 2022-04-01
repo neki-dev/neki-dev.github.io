@@ -38,12 +38,10 @@ $repository-name-size: 18pt;
     }
 
     .meta {
-      margin: 15px 0 5px;
+      margin: 25px 0 5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 15px;
-      border-top: 1px solid rgba(0 0 0 / 5%);
 
       .marks {
         > span {
@@ -60,22 +58,19 @@ $repository-name-size: 18pt;
           }
 
           &.type {
-            color: #aaa;
-            background: #eee;
+            color: #888;
+            background: #fff;
 
             &.lib {
               color: #87cfff;
-              background: color.adjust(#87cfff, $lightness: 21%);
             }
 
             &.framework {
               color: #98d485;
-              background: color.adjust(#98d485, $lightness: 29%);
             }
 
             &.game {
               color: #d1759e;
-              background: color.adjust(#d1759e, $lightness: 33%);
             }
           }
         }
@@ -84,6 +79,7 @@ $repository-name-size: 18pt;
       .data {
         margin-left: 10px;
         display: flex;
+        padding-top: 1px;
 
         .count {
           padding-left: 17px;
