@@ -3,11 +3,11 @@ import { JSX } from 'solid-js/jsx-runtime';
 
 import './index.scss';
 
-import StackTimeline from './components/stack-timeline';
-import PersonalInfo from './components/personal-info';
-import JobHistory from './components/job-history';
-import Repositories from './components/repositories';
-import MerchGallery from './components/merch-gallery';
+import StackTimeline from './components/StackTimeline';
+import PersonalInfo from './components/PersonalInfo';
+import JobHistory from './components/JobHistory';
+import Repositories from './components/Repositories';
+import MerchGallery from './components/MerchGallery';
 
 const SampleRouter: {
   [key: string]: JSX.Element

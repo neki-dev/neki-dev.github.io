@@ -1,14 +1,14 @@
-export enum PackageType {
+export enum RepositoryType {
   PRIVATE = 'private',
   FRAMEWORK = 'framework',
   LIB = 'lib',
   GAME = 'game',
 }
 
-export type Package = {
+export type Repository = {
   name: string
   description: string
-  type: PackageType
+  type: RepositoryType
   lang?: string
   forks: number
   likes: number

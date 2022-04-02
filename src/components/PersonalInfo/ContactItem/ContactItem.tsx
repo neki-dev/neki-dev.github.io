@@ -1,4 +1,4 @@
-import { SocialContact } from './types';
+import { SocialContact } from '~components/PersonalInfo/types';
 
 import './ContactItem.scss';
 

@@ -1,17 +1,12 @@
 import { createResource } from 'solid-js';
-import { Package } from './types';
-import PackageItem from './PackageItem';
-import { formatPackageList } from './helpers';
-import { ACCOUNT_USERNAME } from './defines';
+import { Repository } from './types';
+import RepositoryItem from './RepositoryItem';
+import { fetchRepositories } from './resources';
 
 import './Repositories.scss';
 
-const fetchRepositories = () => fetch(`https://api.github.com/users/${ACCOUNT_USERNAME}/repos`)
-  .then((res) => res.json())
-  .then(formatPackageList);
-
 export default function Repositories() {
-  const [packages] = createResource<Package[]>(fetchRepositories, {
+  const [repositories] = createResource<Repository[]>(fetchRepositories, {
     initialValue: [],
   });
 
@@ -20,8 +15,8 @@ export default function Repositories() {
       <div className="wrapper">
         <h4>Public Repositories</h4>
         <div className="grid large">
-          {packages().map((pkg: Package) => (
-            <PackageItem {...pkg} />
+          {repositories().map((repository) => (
+            <RepositoryItem {...repository} />
           ))}
         </div>
       </div>

@@ -1,9 +1,9 @@
 @use "sass:color";
-@import "../../defines";
+@import "~root/defines";
 
 $repository-name-size: 18pt;
 
-.package-item {
+.repository-item {
   position: relative;
 
   .container {
@@ -12,7 +12,7 @@ $repository-name-size: 18pt;
     text-decoration: none;
     height: 100%;
     background: rgba(255 255 255 / 40%);
-    padding: 20px 25px;
+    padding: 30px 35px;
 
     .name {
       margin-bottom: 15px;
@@ -130,8 +130,12 @@ $repository-name-size: 18pt;
 }
 
 @include screen($media-size-s) {
-  .package-item .container .name {
-    font-size: $repository-name-size * 0.8;
-    line-height: $repository-name-size * 0.8;
+  .package-item .container {
+    padding: 20px 25px;
+
+    .name {
+      font-size: $repository-name-size * 0.8;
+      line-height: $repository-name-size * 0.8;
+    }
   }
 }

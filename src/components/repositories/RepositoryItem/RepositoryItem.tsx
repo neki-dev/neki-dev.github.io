@@ -1,15 +1,15 @@
-import { Package } from './types';
-import { ACCOUNT_USERNAME } from './defines';
+import { Repository } from '~components/Repositories/types';
+import { ACCOUNT_USERNAME } from '~components/Repositories/defines';
 
-import './PackageItem.scss';
+import './RepositoryItem.scss';
 
-export default function PackageItem({
+export default function RepositoryItem({
   name, description, type, lang, forks, likes,
-}: Package) {
+}: Repository) {
   const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
 
   return (
-    <div className="package-item">
+    <div className="repository-item">
       <a
         href={link} target="_blank" className="container"
         rel="noreferrer"
