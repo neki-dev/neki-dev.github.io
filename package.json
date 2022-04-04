@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@neki-dev/eslint-config": "github:neki-dev/eslint-config",
-    "vite-plugin-solid-svg": "github:neki-dev/vite-plugin-solid-svg",
     "alias-reuse": "^1.0.1",
     "eslint": "^8.10.0",
     "sass": "^1.44.0",
@@ -32,7 +31,8 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "typescript": "^4.1.6",
     "vite": "^2.5.7",
-    "vite-plugin-solid": "^2.0.3"
+    "vite-plugin-solid": "^2.0.3",
+    "vite-plugin-svg-inject": "^1.0.0"
   },
   "dependencies": {
     "babel-preset-solid": "^1.3.6",
