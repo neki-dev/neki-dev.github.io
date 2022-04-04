@@ -13,7 +13,7 @@
     "types": ["vite/client"],
     "paths": {
       "~components/*": ["./src/components/*"],
-      "~root/*": ["./src/*"],
+      "~root/*": ["./src/*"]
     }
   }
 }

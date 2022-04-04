@@ -1,6 +1,6 @@
-import path from 'path';
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+import alias from 'alias-reuse';
 
 export default defineConfig({
   plugins: [
@@ -13,9 +13,8 @@ export default defineConfig({
     outDir: '../',
   },
   resolve: {
-    alias: {
-      '~components': path.resolve(__dirname, './src/components'),
-      '~root': path.resolve(__dirname, './src'),
-    },
+    alias: alias(__dirname)
+      .fromTsconfig()
+      .toVite(),
   },
 });

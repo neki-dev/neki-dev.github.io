@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@neki-dev/eslint-config": "github:neki-dev/eslint-config",
+    "alias-reuse": "^1.0.1",
     "eslint": "^8.10.0",
     "sass": "^1.44.0",
     "stylelint": "^14.1.0",
