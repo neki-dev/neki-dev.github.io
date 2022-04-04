@@ -2,6 +2,8 @@ import { Repository } from '~components/Repositories/types';
 import { ACCOUNT_USERNAME } from '~components/Repositories/defines';
 
 import './RepositoryItem.scss';
+import IconFork from './images/icons/fork.svg';
+import IconLike from './images/icons/like.svg';
 
 export default function RepositoryItem({
   name, description, sign, lang, forks, likes, dateCreate,
@@ -30,9 +32,13 @@ export default function RepositoryItem({
             href={linkFork} target="_blank" rel="noreferrer"
             className="count forks" title="Fork repository"
           >
+            <IconFork />
             {forks}
           </a>
-          <div className="count likes">{likes}</div>
+          <div className="count likes">
+            <IconLike />
+            {likes}
+          </div>
         </div>
       </div>
     </div>

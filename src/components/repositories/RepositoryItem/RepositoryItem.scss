@@ -63,24 +63,24 @@ $repository-name-size: 18pt;
         line-height: 8pt;
       }
 
-      .date {
-      }
-
       .count {
-        padding-left: 19px;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: left center;
-        display: block;
+        display: flex;
         text-decoration: none;
         color: $color-second;
+        align-items: center;
 
-        &.forks {
-          background-image: url("./images/icons/fork.svg");
+        svg {
+          margin-right: 5px;
+          width: 15px;
+          height: 15px;
         }
 
-        &.likes {
-          background-image: url("./images/icons/like.svg");
+        &[href]:hover {
+          color: #000;
+
+          svg {
+            stroke: #000;
+          }
         }
       }
     }
