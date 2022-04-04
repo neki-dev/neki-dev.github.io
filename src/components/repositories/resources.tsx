@@ -7,31 +7,32 @@ type UnformattedRepository = {
   description: string
   forks_count: number
   stargazers_count: number
+  created_at: string
 };
 
 const DEPRECATED_SIGN = '⛔ Deprecated';
-const TYPES_SIGN = {
-  '🥷🏼': RepositoryType.PRIVATE,
-  '🎲': RepositoryType.GAME,
-  '⚡': RepositoryType.LIB,
-  '🛠': RepositoryType.FRAMEWORK,
-};
+
+function parseDate(date: string): string {
+  const [, month, , year] = new Date(date).toDateString().split(' ');
+  return `${month} '${year.substring(2)}`;
+}
 
 function parseRepository(item: UnformattedRepository): Repository {
   const repository: Repository = {
     name: item.name,
     lang: item.language,
-    type: RepositoryType.LIB,
+    sign: RepositoryType.LIB,
     description: item.description,
     forks: item.forks_count,
     likes: item.stargazers_count,
+    dateCreate: parseDate(item.created_at),
   };
 
-  Object.entries(TYPES_SIGN).forEach(([sign, type]) => {
-    if (repository.description.includes(sign)) {
-      repository.type = type;
-    }
-  });
+  const signMatch = repository.description.match(/(^\W+)/);
+  if (signMatch) {
+    repository.sign = signMatch[0].trim();
+    repository.description = repository.description.replace(signMatch[0], '');
+  }
 
   if (repository.description.includes(DEPRECATED_SIGN)) {
     // @ts-ignore
@@ -51,6 +52,6 @@ export function fetchRepositories(): Promise<Repository[]> {
     .then((res) => res.json())
     .then((res) => (
       res.map(parseRepository)
-        .filter((repository: Repository) => (repository.type !== RepositoryType.PRIVATE))
+        .filter((repository: Repository) => (repository.sign !== RepositoryType.PRIVATE))
     ));
 }

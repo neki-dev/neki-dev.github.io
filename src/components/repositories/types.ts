@@ -1,15 +1,16 @@
 export enum RepositoryType {
-  PRIVATE = 'private',
-  FRAMEWORK = 'framework',
-  LIB = 'lib',
-  GAME = 'game',
+  PRIVATE = '🥷🏼',
+  FRAMEWORK = '🛠',
+  LIB = '⚡',
+  GAME = '🎲',
 }
 
 export type Repository = {
   name: string
   description: string
-  type: RepositoryType
+  sign: string
   lang?: string
   forks: number
   likes: number
+  dateCreate: string
 };

@@ -4,33 +4,37 @@ import { ACCOUNT_USERNAME } from '~components/Repositories/defines';
 import './RepositoryItem.scss';
 
 export default function RepositoryItem({
-  name, description, type, lang, forks, likes,
+  name, description, sign, lang, forks, likes, dateCreate,
 }: Repository) {
   const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
+  const linkFork = `https://github.com/${ACCOUNT_USERNAME}/${name}/fork`;
 
   return (
     <div className="repository-item">
-      <a
-        href={link} target="_blank" className="container"
-        rel="noreferrer"
-      >
-        <div className="name">{name}</div>
+      <div className="container">
+        <a
+          href={link} target="_blank" rel="noreferrer"
+          className="name" title="Open repository"
+        >
+          {sign}
+          {' '}
+          {name}
+        </a>
         <div className="description">
           {description}
         </div>
         <div className="meta">
-          <div className="marks">
-            <span className={`type ${type}`}>{type}</span>
-            {lang && (
-              <span>{lang}</span>
-            )}
-          </div>
-          <div className="data">
-            <div className="count forks">{forks}</div>
-            <div className="count likes">{likes}</div>
-          </div>
+          <div className="lang">{lang}</div>
+          <div className="date">{dateCreate}</div>
+          <a
+            href={linkFork} target="_blank" rel="noreferrer"
+            className="count forks" title="Fork repository"
+          >
+            {forks}
+          </a>
+          <div className="count likes">{likes}</div>
         </div>
-      </a>
+      </div>
     </div>
   );
 }

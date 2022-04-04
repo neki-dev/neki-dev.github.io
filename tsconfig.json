@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "app/",
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "es6",
     "target": "esnext",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",

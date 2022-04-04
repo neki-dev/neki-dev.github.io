@@ -9,10 +9,10 @@ $repository-name-size: 18pt;
   .container {
     display: flex;
     flex-direction: column;
-    text-decoration: none;
     height: 100%;
     background: rgba(255 255 255 / 40%);
     padding: 30px 35px;
+    transition: all 0.4s ease-out;
 
     .name {
       margin-bottom: 15px;
@@ -21,7 +21,12 @@ $repository-name-size: 18pt;
       font-size: $repository-name-size;
       line-height: $repository-name-size;
       text-transform: lowercase;
+      text-decoration: none;
       white-space: nowrap;
+
+      &:hover {
+        color: #000;
+      }
     }
 
     .description {
@@ -40,77 +45,51 @@ $repository-name-size: 18pt;
     .meta {
       margin: 25px 0 5px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      font-weight: 100;
+      color: $color-second;
+      font-size: 9pt;
 
-      .marks {
-        > span {
-          background: #fff;
-          color: $color-second;
-          display: inline-block;
-          padding: 2px 4px;
-          font-size: 8pt;
-          line-height: 8pt;
-          text-transform: uppercase;
-
-          &:not(:last-child) {
-            margin-right: 5px;
-          }
-
-          &.type {
-            color: #888;
-            background: #fff;
-
-            &.lib {
-              color: #87cfff;
-            }
-
-            &.framework {
-              color: #98d485;
-            }
-
-            &.game {
-              color: #d1759e;
-            }
-          }
-        }
+      > *:not(:last-child) {
+        margin-right: 15px;
       }
 
-      .data {
-        margin-left: 10px;
-        display: flex;
-        padding-top: 1px;
+      .lang {
+        height: 15px;
+        background: #fff;
+        display: block;
+        padding: 2px 4px;
+        font-size: 8pt;
+        line-height: 8pt;
+      }
 
-        .count {
-          padding-left: 17px;
-          background-repeat: no-repeat;
-          background-size: auto 100%;
-          background-position: left center;
-          color: #777;
-          font-size: 9pt;
-          line-height: 9pt;
-          height: 12px;
+      .date {
+      }
 
-          &.forks {
-            background-image: url("./images/icons/fork.svg");
-            margin-right: 10px;
-          }
+      .count {
+        padding-left: 19px;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: left center;
+        display: block;
+        text-decoration: none;
+        color: $color-second;
 
-          &.likes {
-            background-image: url("./images/icons/like.svg");
-          }
+        &.forks {
+          background-image: url("./images/icons/fork.svg");
+        }
+
+        &.likes {
+          background-image: url("./images/icons/like.svg");
         }
       }
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
+      transform: scale(1.07);
       background: rgba(255 255 255 / 60%);
 
-      .name,
-      .description {
-        color: $color-dark;
-      }
+      // box-shadow: 0 6px 0 0 $color-main;
     }
   }
 }
