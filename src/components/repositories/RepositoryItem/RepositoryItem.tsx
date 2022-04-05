@@ -1,5 +1,5 @@
 import { Repository } from '~components/Repositories/types';
-import { ACCOUNT_USERNAME } from '~components/Repositories/defines';
+import { ACCOUNT_URL } from '~components/Repositories/defines';
 
 import './RepositoryItem.scss';
 import IconFork from './images/icons/fork.svg';
@@ -8,8 +8,8 @@ import IconLike from './images/icons/like.svg';
 export default function RepositoryItem({
   name, description, sign, lang, forks, likes, dateCreate,
 }: Repository) {
-  const link = `https://github.com/${ACCOUNT_USERNAME}/${name}`;
-  const linkFork = `https://github.com/${ACCOUNT_USERNAME}/${name}/fork`;
+  const link = `${ACCOUNT_URL}/${name}`;
+  const linkFork = `${ACCOUNT_URL}/${name}/fork`;
 
   return (
     <div className="repository-item">

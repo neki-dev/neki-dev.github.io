@@ -1,4 +1,4 @@
-import { Repository, RepositoryType } from './types';
+import { Repository } from './types';
 import { ACCOUNT_USERNAME } from './defines';
 
 type UnformattedRepository = {
@@ -10,6 +10,7 @@ type UnformattedRepository = {
   created_at: string
 };
 
+const IGNORED_SINGS = ['🥷🏼'];
 const DEPRECATED_SIGN = '⛔ Deprecated';
 
 function parseDate(date: string): string {
@@ -21,7 +22,6 @@ function parseRepository(item: UnformattedRepository): Repository {
   const repository: Repository = {
     name: item.name,
     lang: item.language,
-    sign: RepositoryType.LIB,
     description: item.description,
     forks: item.forks_count,
     likes: item.stargazers_count,
@@ -52,6 +52,8 @@ export function fetchRepositories(): Promise<Repository[]> {
     .then((res) => res.json())
     .then((res) => (
       res.map(parseRepository)
-        .filter((repository: Repository) => (repository.sign !== RepositoryType.PRIVATE))
+        .filter((repository: Repository) => (
+          repository.sign && !IGNORED_SINGS.includes(repository.sign)
+        ))
     ));
 }
