@@ -21,7 +21,7 @@ function parseDate(date: string): string {
 function parseRepository(item: UnformattedRepository): Repository {
   const repository: Repository = {
     name: item.name,
-    lang: item.language,
+    lang: item.language?.replace(/[a-z]+/g, ''),
     description: item.description,
     forks: item.forks_count,
     likes: item.stargazers_count,

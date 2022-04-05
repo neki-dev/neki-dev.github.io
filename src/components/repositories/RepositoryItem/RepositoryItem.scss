@@ -12,10 +12,10 @@ $repository-name-size: 18pt;
     height: 100%;
     background: rgba(255 255 255 / 40%);
     padding: 30px 35px;
-    transition: all 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
 
     .name {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       color: $color-main;
       font-weight: bold;
       font-size: $repository-name-size;
@@ -35,6 +35,7 @@ $repository-name-size: 18pt;
       font-weight: 100;
       font-size: 11pt;
       line-height: 11pt;
+      margin-bottom: 25px;
 
       > span {
         display: block;
@@ -43,7 +44,6 @@ $repository-name-size: 18pt;
     }
 
     .meta {
-      margin: 25px 0 5px;
       display: flex;
       align-items: center;
       font-weight: 100;
@@ -56,11 +56,11 @@ $repository-name-size: 18pt;
 
       .lang {
         height: 15px;
-        background: #fff;
         display: block;
-        padding: 2px 4px;
+        padding: 1px 4px;
         font-size: 8pt;
         line-height: 8pt;
+        border: 1px solid color.adjust($color-second, $lightness: 10%);
       }
 
       .count {
@@ -86,10 +86,8 @@ $repository-name-size: 18pt;
     }
 
     &:hover {
-      transform: scale(1.07);
-      background: rgba(255 255 255 / 60%);
-
-      // box-shadow: 0 6px 0 0 $color-main;
+      background: #fff;
+      animation: impulse-effect 0.4s ease-out;
     }
   }
 }
@@ -116,5 +114,15 @@ $repository-name-size: 18pt;
       font-size: $repository-name-size * 0.8;
       line-height: $repository-name-size * 0.8;
     }
+  }
+}
+
+@keyframes impulse-effect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255 255 255 / 50%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255 255 255 / 0%);
   }
 }
