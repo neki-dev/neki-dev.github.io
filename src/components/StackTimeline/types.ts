@@ -3,7 +3,6 @@ export type Stack = {
   beg: number
   end?: number
   color: [string, string]
-  basic?: boolean
 };
 
 export type StackGroup = {

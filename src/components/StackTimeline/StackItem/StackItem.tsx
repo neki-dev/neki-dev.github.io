@@ -10,7 +10,7 @@ type ComponentProps = Stack & {
 };
 
 export default function StackItem({
-  range, beg, end, name, color, basic,
+  range, beg, end, name, color,
 }: ComponentProps) {
   const experience = (end || range.end) - beg;
   const yearsLength = range.end - range.beg + 1;
@@ -19,11 +19,8 @@ export default function StackItem({
   return (
     <div className={`stack-item ${end ? 'inactive' : 'active'}`}>
       <div className="info">
-        {basic && (
-        <span className="status">Main</span>
-        )}
         {end && (
-        <span className="status">Not actual</span>
+          <span className="status">Not actual</span>
         )}
         <div
           className="icon"
