@@ -13,16 +13,20 @@ section.job-history {
     font-weight: bold;
     margin-bottom: 9%;
 
-    span {
+    .amount {
       display: flex;
       align-items: flex-start;
-      font-size: $total-title-size * 0.9;
-      line-height: $total-title-size * 0.9;
 
       b {
         font-size: $total-title-size * 1.5;
         line-height: $total-title-size * 1.5;
         margin-right: 7px;
+      }
+
+      span {
+        font-size: $total-title-size * 0.9;
+        line-height: $total-title-size * 0.9;
+        margin-top: 4px;
       }
     }
   }

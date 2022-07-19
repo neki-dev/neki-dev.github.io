@@ -1,13 +1,6 @@
 {
-  "extends": [
-    "@neki-dev/eslint-config",
-    "@neki-dev/eslint-config/typescript"
-  ],
+  "extends": ["neki/tsx"],
   "rules": {
-    "import/extensions": "off",
-    "react/react-in-jsx-scope": "off",
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": ["./*.js"]
-    }]
+    "react/react-in-jsx-scope": "off"
   }
 }

@@ -49,7 +49,7 @@ export default function StackItem({
               }}
             >
               <span className="beg">{beg}</span>
-              <span className="end">{end || 'today'}</span>
+              <span className="end">{end || 'now'}</span>
             </div>
           </div>
         </div>
