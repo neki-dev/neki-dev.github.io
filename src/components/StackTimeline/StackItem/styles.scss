@@ -11,7 +11,7 @@
     .icon {
       width: 24px;
       height: 24px;
-      background: #fff;
+      background-color: #fff;
       margin-right: $gap-s;
     }
 
@@ -65,7 +65,7 @@
             position: absolute;
             content: "";
             width: 1px;
-            background: #fff;
+            background-color: #fff;
             top: -15px;
             bottom: 11px;
           }

@@ -4,7 +4,7 @@ $logotype-size: 80px;
 
 section.personal-info {
   height: 100vh;
-  background: #fff url("./images/background.png") center top no-repeat;
+  background-color: #fff url("./images/background.png") center top no-repeat;
   background-size: auto 100vh;
   padding-bottom: 0;
   padding-top: 0;
@@ -35,7 +35,8 @@ section.personal-info {
     }
 
     .name {
-      margin: 40px 0 0 -3px;
+      margin-top: $gap-l;
+      margin-left: -3px;
       display: flex;
       flex-direction: column;
 
@@ -60,8 +61,10 @@ section.personal-info {
     }
 
     .contacts {
-      margin: 45px -15px -15px;
-      max-width: 70%;
+      margin-top: $gap-l;
+      display: inline-grid;
+      grid-auto-flow: column;
+      grid-gap: $gap-m;
     }
   }
 }
@@ -129,10 +132,6 @@ section.personal-info {
       .logotype {
         width: $logotype-size * 5.11 * 0.6;
         height: $logotype-size * 0.6;
-      }
-
-      .contacts {
-        max-width: none;
       }
     }
   }

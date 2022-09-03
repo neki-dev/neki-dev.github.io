@@ -13,7 +13,7 @@
     content: "";
     height: 12px;
     width: 12px;
-    background: #fff;
+    background-color: #fff;
     left: 0;
     top: 2px;
   }
@@ -21,29 +21,30 @@
   .period {
     font-size: 11pt;
     line-height: 11pt;
-    background: #000;
+    background-color: #000;
     padding: 1px 5px;
     margin: -1px 0 0 -5px;
   }
 
   .organization {
+    margin-top: $gap-s;
     font-weight: bold;
     font-size: 24pt;
     line-height: 24pt;
-    margin: 10px 0;
     color: $color-second;
   }
 
   .position {
+    margin-top: $gap-s;
     font-size: 14pt;
     line-height: 14pt;
     color: #fff;
   }
 
   .description {
+    margin-top: $gap-xs;
     font-size: 11pt;
     line-height: 10pt;
     font-weight: 100;
-    margin-top: 6px;
   }
 }

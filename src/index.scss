@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #fff;
+  background-color: #fff;
   color: $color-dark;
   font: 14px "Readex Pro", Arial, Tahoma, serif;
   overflow-x: hidden;
@@ -70,6 +70,15 @@ section {
     font-size: $section-title-size * 0.7;
     line-height: $section-title-size * 0.7;
   }
+}
+
+/**
+ * Content plug
+ */
+
+.content-plug {
+  background-color: $color-plug;
+  min-height: 400px;
 }
 
 /**

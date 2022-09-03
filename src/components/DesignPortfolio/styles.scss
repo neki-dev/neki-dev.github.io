@@ -8,7 +8,7 @@ section.design-portfolio {
   .images {
     display: grid;
     grid-template-columns: 44% auto;
-    grid-column-gap: 22px;
+    grid-gap: $gap-m;
 
     .current {
       img {
@@ -24,8 +24,34 @@ section.design-portfolio {
       grid-gap: $gap-s;
     }
   }
+}
 
-  .content-plug {
-    height: 370px;
+@include screen($media-size-l) {
+  section.design-portfolio .images {
+    grid-template-columns: 50% auto;
+
+    .all {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.design-portfolio .images {
+    grid-template-columns: 60% auto;
+
+    .all {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.design-portfolio .images {
+    grid-template-columns: 100%;
+
+    .all {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

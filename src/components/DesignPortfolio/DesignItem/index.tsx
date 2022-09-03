@@ -2,7 +2,7 @@ import './styles.scss';
 
 type Props = {
   image: string
-  isActive: boolean
+  isActive: () => boolean
   onClick: () => void
 };
 
@@ -11,7 +11,7 @@ export default function DesignItem({
 }: Props) {
   return (
     <div
-      className={`design-item ${isActive ? 'active' : ''}`}
+      className={`design-item ${isActive() ? 'active' : ''}`}
       onClick={onClick}
     >
       <img src={image} alt="" />

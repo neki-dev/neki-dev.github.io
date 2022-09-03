@@ -1,6 +1,7 @@
 @import "~root/defines";
 
 .design-item {
+  background-color: $color-plug;
   position: relative;
 
   &::after {

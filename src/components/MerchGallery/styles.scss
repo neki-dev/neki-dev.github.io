@@ -1,7 +1,7 @@
 @import "~root/defines";
 
 section.merch-gallery {
-  background: #fff;
+  background-color: #fff;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ section.merch-gallery {
           content: "";
           width: 4px;
           height: 4px;
-          background: #111;
+          background-color: #111;
         }
 
         &:hover {

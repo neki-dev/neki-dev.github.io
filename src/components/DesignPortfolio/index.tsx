@@ -24,7 +24,7 @@ export default function DesignPortfolio() {
               { DESIGNS.map((image, index) => (
                 <DesignItem
                   image={image}
-                  isActive={index === currentImage()}
+                  isActive={() => (index === currentImage())}
                   onClick={() => setCurrentImage(index)}
                 />
               )) }

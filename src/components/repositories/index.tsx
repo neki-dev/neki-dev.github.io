@@ -14,11 +14,15 @@ export default function Repositories() {
     <section className="repositories">
       <div className="wrapper">
         <h4>Public Repositories</h4>
-        <div className="grid large">
-          {repositories().map((repository) => (
-            <RepositoryItem {...repository} />
-          ))}
-        </div>
+        { (repositories().length > 0) ? (
+          <div className="grid large">
+            {repositories().map((repository) => (
+              <RepositoryItem {...repository} />
+            ))}
+          </div>
+        ) : (
+          <div className="content-plug" />
+        )}
       </div>
     </section>
   );
