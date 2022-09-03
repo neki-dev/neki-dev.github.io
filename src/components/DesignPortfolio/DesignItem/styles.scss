@@ -1,0 +1,34 @@
+@import "~root/defines";
+
+.design-item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: -3px;
+    right: -3px;
+    top: -3px;
+    bottom: -3px;
+    border: 6px solid $color-second;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &:hover,
+  &.active {
+    cursor: pointer;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

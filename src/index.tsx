@@ -8,6 +8,7 @@ import PersonalInfo from './components/PersonalInfo';
 import JobHistory from './components/JobHistory';
 import Repositories from './components/Repositories';
 import MerchGallery from './components/MerchGallery';
+import DesignPortfolio from '~components/DesignPortfolio';
 
 const SampleRouter: {
   [key: string]: JSX.Element
@@ -18,6 +19,7 @@ const SampleRouter: {
       <StackTimeline />
       <JobHistory />
       <Repositories />
+      <DesignPortfolio />
     </>
   ),
   'merch-gallery': (

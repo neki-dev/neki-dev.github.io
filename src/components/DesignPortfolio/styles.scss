@@ -1,0 +1,31 @@
+@import "~root/defines";
+
+section.design-portfolio {
+  > .wrapper > h4 {
+    color: $color-dark-dim;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 44% auto;
+    grid-column-gap: 22px;
+
+    .current {
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .all {
+      display: grid;
+      grid-auto-rows: min-content;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: $gap-s;
+    }
+  }
+
+  .content-plug {
+    height: 370px;
+  }
+}

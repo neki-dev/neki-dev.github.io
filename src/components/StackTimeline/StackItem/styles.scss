@@ -1,0 +1,97 @@
+@import "~root/defines";
+
+.stack-item {
+  position: relative;
+  color: $color-light;
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      margin-right: $gap-s;
+    }
+
+    .name {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .exp {
+    display: flex;
+    align-items: center;
+    margin-top: $gap-s;
+
+    .number {
+      font-size: 17px;
+      margin-right: 4px;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 14px;
+    }
+  }
+
+  .timeline {
+    height: 26px;
+    margin-top: $gap-s;
+
+    .bar {
+      height: 10px;
+      background: rgb(177 154 228 / 40%);
+
+      .container {
+        position: relative;
+      }
+
+      .moment {
+        position: absolute;
+        height: 10px;
+        background: $color-second;
+
+        span {
+          position: absolute;
+          z-index: 2;
+          font-size: 9px;
+          bottom: -16px;
+
+          &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            background: #fff;
+            top: -15px;
+            bottom: 11px;
+          }
+
+          &.beg {
+            left: 0;
+            padding-left: 2px;
+            transform: translateX(-50%);
+
+            &::after {
+              left: 50%;
+            }
+          }
+
+          &.end {
+            right: 0;
+            padding-right: 2px;
+            transform: translateX(50%);
+
+            &::after {
+              right: 50%;
+              margin-right: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

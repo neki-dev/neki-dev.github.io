@@ -1,0 +1,128 @@
+@use "sass:color";
+@import "~root/defines";
+
+$repository-name-size: 18pt;
+
+.repository-item {
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(255 255 255 / 40%);
+    padding: 30px 35px;
+    transition: background-color 0.4s ease-out;
+
+    .name {
+      margin-bottom: $gap-m;
+      color: $color-main;
+      font-weight: bold;
+      font-size: $repository-name-size;
+      line-height: $repository-name-size;
+      text-transform: lowercase;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    .description {
+      color: color.adjust($color-dark, $lightness: 10%);
+      flex: 1;
+      font-weight: 100;
+      font-size: 11pt;
+      line-height: 11pt;
+      margin-bottom: $gap-m;
+
+      > span {
+        display: block;
+        margin-top: 3px;
+      }
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      font-weight: 100;
+      color: $color-second;
+      font-size: 9pt;
+
+      > *:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      .lang {
+        height: 15px;
+        display: block;
+        padding: 1px 4px;
+        font-size: 8pt;
+        line-height: 8pt;
+        border: 1px solid color.adjust($color-second, $lightness: 10%);
+      }
+
+      .count {
+        display: flex;
+        text-decoration: none;
+        color: $color-second;
+        align-items: center;
+
+        svg {
+          margin-right: 5px;
+          width: 15px;
+          height: 15px;
+        }
+
+        &[href]:hover {
+          color: #000;
+
+          svg {
+            stroke: #000;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background: #fff;
+      animation: impulse-effect 0.4s ease-out;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  .package-item .container .name {
+    font-size: $repository-name-size * 0.95;
+    line-height: $repository-name-size * 0.95;
+  }
+}
+
+@include screen($media-size-m) {
+  .package-item .container .name {
+    font-size: $repository-name-size * 0.9;
+    line-height: $repository-name-size * 0.9;
+  }
+}
+
+@include screen($media-size-s) {
+  .package-item .container {
+    padding: 20px 25px;
+
+    .name {
+      font-size: $repository-name-size * 0.8;
+      line-height: $repository-name-size * 0.8;
+    }
+  }
+}
+
+@keyframes impulse-effect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255 255 255 / 50%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255 255 255 / 0%);
+  }
+}

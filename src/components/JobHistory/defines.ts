@@ -21,7 +21,7 @@ export const JOB_HISTORY: Job[] = [
   },
   {
     organization: 'Alfa-Bank',
-    period: '09.2021',
+    period: '09.2021 - now',
     position: 'Front-End Developer',
     description: 'Development of a personal account for a mortgage borrower',
   },

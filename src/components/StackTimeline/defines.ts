@@ -48,7 +48,7 @@ export const STACK_GROUPS: StackGroup[] = [
     name: 'Platforms',
     stacks: [
       {
-        name: 'Node.js', beg: 2014, color: ['#8fb848', '#a3cf59'],
+        name: 'Node.js', beg: 2014, end: 2021, color: ['#8fb848', '#a3cf59'],
       },
     ],
   },
@@ -56,7 +56,7 @@ export const STACK_GROUPS: StackGroup[] = [
     name: 'Databases',
     stacks: [
       {
-        name: 'Oracle', beg: 2018, color: ['#f23d3d', '#ff5e5e'],
+        name: 'Oracle', beg: 2018, end: 2021, color: ['#f23d3d', '#ff5e5e'],
       },
       {
         name: 'MySQL', beg: 2013, end: 2018, color: ['#c9a459', '#edc980'],
