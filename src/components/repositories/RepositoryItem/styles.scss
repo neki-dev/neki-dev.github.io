@@ -93,21 +93,21 @@ $repository-name-size: 18pt;
 }
 
 @include screen($media-size-l) {
-  .package-item .container .name {
+  .repository-item .container .name {
     font-size: $repository-name-size * 0.95;
     line-height: $repository-name-size * 0.95;
   }
 }
 
 @include screen($media-size-m) {
-  .package-item .container .name {
+  .repository-item .container .name {
     font-size: $repository-name-size * 0.9;
     line-height: $repository-name-size * 0.9;
   }
 }
 
 @include screen($media-size-s) {
-  .package-item .container {
+  .repository-item .container {
     padding: 20px 25px;
 
     .name {
