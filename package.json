@@ -20,7 +20,7 @@
   "scripts": {
     "lint": "eslint ./src --fix",
     "start": "vite",
-    "build": "rm ./assets & vite build"
+    "build": "rm -r ./assets & vite build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.1",
