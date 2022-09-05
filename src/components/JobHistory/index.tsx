@@ -1,4 +1,4 @@
-import useScrollProgress from '../../hooks/use-scroll-progress';
+import { useScrollProgress } from '../../hooks/use-scroll-progress';
 import { Job } from './types';
 import { JOB_HISTORY } from './defines';
 import { getTotalWorkExperience } from './helpers';

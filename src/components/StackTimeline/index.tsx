@@ -23,7 +23,8 @@ export default function StackTimeline() {
         <h4>Development Stack</h4>
         {STACK_GROUPS.map((group: StackGroup) => (
           <div className="group">
-            <div className="grid spaced">
+            <div className="group-name">{group.name}</div>
+            <div className="grid thin">
               {group.stacks.map((stack: Stack) => (
                 <StackItem {...stack} range={range} />
               ))}

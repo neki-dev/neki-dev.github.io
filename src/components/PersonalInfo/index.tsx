@@ -1,4 +1,4 @@
-import useScrollProgress from '../../hooks/use-scroll-progress';
+import { useScrollProgress } from '../../hooks/use-scroll-progress';
 import { SOCIAL_CONTACTS } from './defines';
 import { SocialContact } from './types';
 import ContactItem from './ContactItem';

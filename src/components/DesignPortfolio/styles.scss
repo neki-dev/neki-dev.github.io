@@ -11,9 +11,14 @@ section.design-portfolio {
     grid-gap: $gap-m;
 
     .current {
-      img {
-        display: block;
-        width: 100%;
+      .image-wrapper {
+        box-shadow: 0 0 40px #f5f5f5;
+        background: $color-plug;
+
+        img {
+          display: block;
+          width: 100%;
+        }
       }
     }
 
@@ -49,6 +54,11 @@ section.design-portfolio {
 @include screen($media-size-s) {
   section.design-portfolio .images {
     grid-template-columns: 100%;
+
+    .current .image-wrapper {
+      box-shadow: none;
+      border: 1px solid #eee;
+    }
 
     .all {
       grid-template-columns: repeat(4, 1fr);

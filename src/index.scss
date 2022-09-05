@@ -94,8 +94,8 @@ section {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  &.spaced {
-    grid-gap: 3vw;
+  &.thin {
+    grid-gap: 1vw;
   }
 }
 

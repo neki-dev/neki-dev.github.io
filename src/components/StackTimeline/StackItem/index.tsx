@@ -17,7 +17,7 @@ export default function StackItem({
   const columnSize = (100 / yearsLength);
 
   return (
-    <div className={`stack-item ${end ? 'inactive' : 'active'}`}>
+    <div className={`stack-item ${end ? '' : 'actual'}`}>
       <div className="info">
         <div
           className="icon"
@@ -33,6 +33,7 @@ export default function StackItem({
           {(experience === 1) ? 'year' : 'years'}
           {' '}
           experience
+          {end && ', not actual'}
         </span>
       </div>
       <div className="timeline">
@@ -46,7 +47,7 @@ export default function StackItem({
               }}
             >
               <span className="beg">{beg}</span>
-              <span className="end">{end || 'now'}</span>
+              <span className="end">{end || 'Now'}</span>
             </div>
           </div>
         </div>

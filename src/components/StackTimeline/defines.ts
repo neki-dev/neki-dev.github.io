@@ -2,7 +2,7 @@ import { StackGroup } from './types';
 
 export const STACK_GROUPS: StackGroup[] = [
   {
-    name: 'Makeup',
+    name: 'Layout',
     stacks: [
       {
         name: 'HTML', beg: 2011, color: ['#f58442', '#ff9d63'],
@@ -37,10 +37,10 @@ export const STACK_GROUPS: StackGroup[] = [
       },
       { name: 'Solid.js', beg: 2021, color: ['#4f85b8', '#77a9d9'] },
       {
-        name: 'Angular', beg: 2017, end: 2018, color: ['#d93654', '#ed516d'],
+        name: 'Phaser', beg: 2021, color: ['#73199A', '#922cc1'],
       },
       {
-        name: 'Phaser', beg: 2021, color: ['#73199A', '#922cc1'],
+        name: 'Angular', beg: 2017, end: 2018, color: ['#d93654', '#ed516d'],
       },
     ],
   },
