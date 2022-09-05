@@ -22,8 +22,8 @@ export default function JobHistory() {
           <div>
             Total work experience
             <div className="amount">
-              <b>{getTotalWorkExperience()}</b>
-              <span>years</span>
+              <span className="number">{getTotalWorkExperience()}</span>
+              <span className="postfix">years</span>
             </div>
           </div>
         </div>

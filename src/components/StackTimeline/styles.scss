@@ -10,8 +10,9 @@ section.stack-timeline {
 
   .group {
     .group-name {
-      font-size: 14pt;
       margin-bottom: $gap-m;
+      font-size: $font-size-m;
+      line-height: $font-size-m;
       font-weight: 100;
       color: #fff;
       position: relative;

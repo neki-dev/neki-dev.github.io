@@ -37,26 +37,27 @@ section.personal-info {
 
     .name {
       margin-top: $gap-l;
-      margin-left: -3px;
-      display: flex;
-      flex-direction: column;
 
       h1 {
         font-size: 60pt;
-        line-height: 60pt;
-        margin-left: -3px;
+        line-height: 60pt * 0.9;
+        margin-left: -6px;
       }
 
       h2 {
-        font-size: 30pt;
-        line-height: 30pt;
+        margin-top: 5px;
+        margin-left: -3px;
+        font-size: $font-size-xxl;
+        line-height: $font-size-xxl * 0.9;
         font-weight: 100;
       }
 
       .location {
-        font-size: 16pt;
-        line-height: 16pt;
-        margin: 3px 0 0 2px;
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: -1px;
+        font-size: $font-size-l;
+        line-height: $font-size-l;
         font-weight: 100;
       }
     }
@@ -76,6 +77,7 @@ section.personal-info {
 
     .me {
       top: 8%;
+      left: 50%;
       background-position-y: bottom;
       background-size: auto 100%;
     }
@@ -92,23 +94,15 @@ section.personal-info {
       .name {
         h1 {
           font-size: 50pt;
-          line-height: 40pt;
+          line-height: 50pt * 0.9;
           margin-bottom: 15px;
         }
 
         h2 {
-          font-size: 26pt;
-          line-height: 26pt;
+          font-size: $font-size-xl;
+          line-height: $font-size-xl * 0.9;
         }
       }
-    }
-  }
-}
-
-@include screen($media-size-m) {
-  section.personal-info {
-    .me {
-      left: 45%;
     }
   }
 }

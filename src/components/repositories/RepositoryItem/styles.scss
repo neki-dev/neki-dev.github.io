@@ -1,8 +1,6 @@
 @use "sass:color";
 @import "~root/defines";
 
-$repository-name-size: 18pt;
-
 .repository-item {
   position: relative;
 
@@ -18,8 +16,8 @@ $repository-name-size: 18pt;
       margin-bottom: $gap-m;
       color: $color-main;
       font-weight: bold;
-      font-size: $repository-name-size;
-      line-height: $repository-name-size;
+      font-size: $font-size-l;
+      line-height: $font-size-l;
       text-transform: lowercase;
       text-decoration: none;
       white-space: nowrap;
@@ -33,35 +31,33 @@ $repository-name-size: 18pt;
       color: color.adjust($color-dark, $lightness: 10%);
       flex: 1;
       font-weight: 100;
-      font-size: 11pt;
-      line-height: 11pt;
+      font-size: $font-size-s;
+      line-height: $font-size-s + 0.5pt;
       margin-bottom: $gap-m;
 
       > span {
         display: block;
         text-transform: uppercase;
         margin-top: 5px;
-        font-size: 9pt;
+        font-size: $font-size-xs;
+        opacity: 0.75;
       }
     }
 
     .meta {
       display: flex;
       align-items: center;
-      font-weight: 100;
       color: $color-second;
-      font-size: 9pt;
+      font-size: $font-size-xs;
+      line-height: $font-size-xs;
+      font-weight: 100;
 
       > *:not(:last-child) {
         margin-right: 15px;
       }
 
       .lang {
-        height: 15px;
-        display: block;
         padding: 1px 4px;
-        font-size: 8pt;
-        line-height: 8pt;
         border: 1px solid color.adjust($color-second, $lightness: 10%);
       }
 
@@ -96,15 +92,15 @@ $repository-name-size: 18pt;
 
 @include screen($media-size-l) {
   .repository-item .container .name {
-    font-size: $repository-name-size * 0.95;
-    line-height: $repository-name-size * 0.95;
+    font-size: $font-size-l * 0.95;
+    line-height: $font-size-l * 0.95;
   }
 }
 
 @include screen($media-size-m) {
   .repository-item .container .name {
-    font-size: $repository-name-size * 0.9;
-    line-height: $repository-name-size * 0.9;
+    font-size: $font-size-l * 0.9;
+    line-height: $font-size-l * 0.9;
   }
 }
 
@@ -113,8 +109,8 @@ $repository-name-size: 18pt;
     padding: 20px 25px;
 
     .name {
-      font-size: $repository-name-size * 0.8;
-      line-height: $repository-name-size * 0.8;
+      font-size: $font-size-l * 0.8;
+      line-height: $font-size-l * 0.8;
     }
   }
 }

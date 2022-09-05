@@ -1,14 +1,11 @@
 @import "~root/defines";
 
 .job-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   position: relative;
   padding-left: 30px;
   color: #bbb;
 
-  &::after {
+  &::before {
     position: absolute;
     content: "";
     height: 12px;
@@ -19,32 +16,36 @@
   }
 
   .period {
-    font-size: 11pt;
-    line-height: 11pt;
-    background-color: #000;
-    padding: 1px 5px;
     margin: -1px 0 0 -5px;
+
+    > span {
+      display: inline-block;
+      font-size: $font-size-s;
+      line-height: $font-size-s;
+      background-color: #000;
+      padding: 1px 5px;
+    }
   }
 
   .organization {
     margin-top: $gap-s;
     font-weight: bold;
-    font-size: 24pt;
-    line-height: 24pt;
+    font-size: $font-size-xl;
+    line-height: $font-size-xl;
     color: $color-second;
   }
 
   .position {
     margin-top: $gap-s;
-    font-size: 14pt;
-    line-height: 14pt;
+    font-size: $font-size-m;
+    line-height: $font-size-m;
     color: #fff;
   }
 
   .description {
     margin-top: $gap-xs;
-    font-size: 11pt;
-    line-height: 10pt;
+    font-size: $font-size-s;
+    line-height: $font-size-s + 0.5pt;
     font-weight: 100;
   }
 }

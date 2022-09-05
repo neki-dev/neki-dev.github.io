@@ -24,23 +24,26 @@
     .name {
       color: #fff;
       font-weight: bold;
-      font-size: 20px;
+      font-size: $font-size-l;
+      line-height: $font-size-l;
     }
   }
 
-  .exp {
+  .experience {
     display: flex;
     align-items: center;
     margin-top: $gap-s;
 
     .number {
-      font-size: 17px;
       margin-right: 4px;
+      font-size: $font-size-s;
+      line-height: $font-size-s;
       font-weight: bold;
     }
 
-    .label {
-      font-size: 14px;
+    .postfix {
+      font-size: $font-size-xs;
+      line-height: $font-size-xs;
     }
   }
 
@@ -64,7 +67,8 @@
         span {
           position: absolute;
           z-index: 2;
-          font-size: 9px;
+          font-size: $font-size-xxs;
+          line-height: $font-size-xxs;
           padding-top: 14px;
 
           &::after {

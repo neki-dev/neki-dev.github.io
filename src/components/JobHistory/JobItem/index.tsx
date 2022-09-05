@@ -7,7 +7,9 @@ export default function JobItem({
 }: Job) {
   return (
     <div className="job-item">
-      <div className="period">{period}</div>
+      <div className="period">
+        <span>{period}</span>
+      </div>
       <div className="organization">{organization}</div>
       <div className="position">{position}</div>
       <div className="description">{description}</div>

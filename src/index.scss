@@ -24,7 +24,6 @@ body {
  * Section
  */
 
-$section-title-size: 30pt;
 $section-wrapper-max-width: 1300px;
 $section-wrapper-padding: 10%;
 
@@ -40,8 +39,8 @@ section {
 
     // Title
     > h4 {
-      font-size: $section-title-size;
-      line-height: $section-title-size;
+      font-size: $font-size-xxl;
+      line-height: $font-size-xxl;
       text-transform: uppercase;
       margin-bottom: 9%;
       display: block;
@@ -53,22 +52,22 @@ section {
 
 @include screen($media-size-l) {
   section > .wrapper > h4 {
-    font-size: $section-title-size * 0.9;
-    line-height: $section-title-size * 0.9;
+    font-size: $font-size-xxl * 0.9;
+    line-height: $font-size-xxl * 0.9;
   }
 }
 
 @include screen($media-size-m) {
   section > .wrapper > h4 {
-    font-size: $section-title-size * 0.8;
-    line-height: $section-title-size * 0.8;
+    font-size: $font-size-xxl * 0.8;
+    line-height: $font-size-xxl * 0.8;
   }
 }
 
 @include screen($media-size-s) {
   section > .wrapper > h4 {
-    font-size: $section-title-size * 0.7;
-    line-height: $section-title-size * 0.7;
+    font-size: $font-size-xxl * 0.7;
+    line-height: $font-size-xxl * 0.7;
   }
 }
 

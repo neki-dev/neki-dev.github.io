@@ -27,9 +27,9 @@ export default function StackItem({
         />
         <div className="name">{name}</div>
       </div>
-      <div className="exp">
+      <div className="experience">
         <span className="number">{experience}</span>
-        <span className="label">
+        <span className="postfix">
           {(experience === 1) ? 'year' : 'years'}
           {' '}
           experience

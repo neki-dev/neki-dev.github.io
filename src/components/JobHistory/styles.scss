@@ -1,14 +1,12 @@
 @import "~root/defines";
 
-$total-title-size: 28pt;
-
 section.job-history {
   background-color: #000;
 
   .total {
     color: #fff;
-    font-size: $total-title-size;
-    line-height: $total-title-size;
+    font-size: $font-size-xxl;
+    line-height: $font-size-xxl;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 9%;
@@ -17,15 +15,15 @@ section.job-history {
       display: flex;
       align-items: flex-start;
 
-      b {
-        font-size: $total-title-size * 1.5;
-        line-height: $total-title-size * 1.5;
+      .number {
+        font-size: $font-size-xxl * 1.5;
+        line-height: $font-size-xxl * 1.5;
         margin-right: 7px;
       }
 
-      span {
-        font-size: $total-title-size * 0.9;
-        line-height: $total-title-size * 0.9;
+      .postfix {
+        font-size: $font-size-xxl * 0.9;
+        line-height: $font-size-xxl * 0.9;
         margin-top: 4px;
       }
     }
@@ -61,16 +59,16 @@ section.job-history {
     }
 
     .total {
-      font-size: $total-title-size * 0.9;
-      line-height: $total-title-size * 0.9;
+      font-size: $font-size-xxl * 0.9;
+      line-height: $font-size-xxl * 0.9;
 
       span {
-        font-size: $total-title-size * 0.9 * 0.9;
-        line-height: $total-title-size * 0.9 * 0.9;
+        font-size: $font-size-xxl * 0.9 * 0.9;
+        line-height: $font-size-xxl * 0.9 * 0.9;
 
         b {
-          font-size: $total-title-size * 1.5 * 0.9;
-          line-height: $total-title-size * 1.5 * 0.9;
+          font-size: $font-size-xxl * 1.5 * 0.9;
+          line-height: $font-size-xxl * 1.5 * 0.9;
         }
       }
     }
@@ -80,16 +78,16 @@ section.job-history {
 @include screen($media-size-m) {
   section.job-history {
     .total {
-      font-size: $total-title-size * 0.8;
-      line-height: $total-title-size * 0.8;
+      font-size: $font-size-xxl * 0.8;
+      line-height: $font-size-xxl * 0.8;
 
       span {
-        font-size: $total-title-size * 0.9 * 0.8;
-        line-height: $total-title-size * 0.9 * 0.8;
+        font-size: $font-size-xxl * 0.9 * 0.8;
+        line-height: $font-size-xxl * 0.9 * 0.8;
 
         b {
-          font-size: $total-title-size * 1.5 * 0.8;
-          line-height: $total-title-size * 1.5 * 0.8;
+          font-size: $font-size-xxl * 1.5 * 0.8;
+          line-height: $font-size-xxl * 1.5 * 0.8;
         }
       }
     }
@@ -104,16 +102,16 @@ section.job-history {
     }
 
     .total {
-      font-size: $total-title-size * 0.7;
-      line-height: $total-title-size * 0.7;
+      font-size: $font-size-xxl * 0.7;
+      line-height: $font-size-xxl * 0.7;
 
       span {
-        font-size: $total-title-size * 0.9 * 0.7;
-        line-height: $total-title-size * 0.9 * 0.7;
+        font-size: $font-size-xxl * 0.9 * 0.7;
+        line-height: $font-size-xxl * 0.9 * 0.7;
 
         b {
-          font-size: $total-title-size * 1.5 * 0.7;
-          line-height: $total-title-size * 1.5 * 0.7;
+          font-size: $font-size-xxl * 1.5 * 0.7;
+          line-height: $font-size-xxl * 1.5 * 0.7;
         }
       }
     }
