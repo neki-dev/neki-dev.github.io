@@ -17,37 +17,37 @@ export default function StackItem({
   const columnSize = (100 / yearsLength);
 
   return (
-    <div className={`stack-item ${end ? '' : 'actual'}`}>
-      <div className="info">
+    <div class={`stack-item ${end ? '' : 'actual'}`}>
+      <div class="info">
         <div
-          className="icon"
+          class="icon"
           style={{
             background: `linear-gradient(${color[1]}, ${color[0]})`,
           }}
         />
-        <div className="name">{name}</div>
+        <div class="name">{name}</div>
       </div>
-      <div className="experience">
-        <span className="number">{experience}</span>
-        <span className="postfix">
+      <div class="experience">
+        <span class="number">{experience}</span>
+        <span class="postfix">
           {(experience === 1) ? 'year' : 'years'}
           {' '}
           experience
           {end && ', not actual'}
         </span>
       </div>
-      <div className="timeline">
-        <div className="bar">
-          <div className="container">
+      <div class="timeline">
+        <div class="bar">
+          <div class="container">
             <div
-              className="moment"
+              class="moment"
               style={{
                 left: `${(beg - range.beg) * columnSize}%`,
                 right: `${(range.end - (end || range.end)) * columnSize}%`,
               }}
             >
-              <span className="beg">{beg}</span>
-              <span className="end">{end || 'Now'}</span>
+              <span class="beg">{beg}</span>
+              <span class="end">{end || 'Now'}</span>
             </div>
           </div>
         </div>

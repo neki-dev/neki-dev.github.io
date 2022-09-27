@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createSignal, Index } from 'solid-js';
 
 import { PrintVariant } from './types';
 import prints from './images/print';
@@ -25,39 +25,43 @@ export default function MerchGallery() {
   }
 
   return (
-    <section className="merch-gallery">
-      <div className="selectors">
-        <div className="model-selector">
-          {prints.map(({ name }, index) => (
-            <div
-              className={`model ${(index === model()) ? 'active' : ''}`}
-              onClick={() => changeModel(index)}
-            >
-              {name}
-            </div>
-          ))}
+    <section class="merch-gallery">
+      <div class="selectors">
+        <div class="model-selector">
+          <Index each={prints}>
+            {(item, index) => (
+              <div
+                class={`model ${(index === model()) ? 'active' : ''}`}
+                onClick={() => changeModel(index)}
+              >
+                {item().name}
+              </div>
+            )}
+          </Index>
         </div>
-        <div className="variant-selector">
-          {prints[model()].variants.map(({ base, print }, index) => (
-            <div
-              className={`variant ${(index === variant()) ? 'active' : ''}`}
-              onClick={() => setVariant(index)}
-            >
-              <div style={{ 'background-color': base.hex }} />
-              <div style={{ 'background-color': print.hex }} />
-            </div>
-          ))}
+        <div class="variant-selector">
+          <Index each={prints[model()].variants}>
+            {(item, index) => (
+              <div
+                class={`variant ${(index === variant()) ? 'active' : ''}`}
+                onClick={() => setVariant(index)}
+              >
+                <div style={{ 'background-color': item().base.hex }} />
+                <div style={{ 'background-color': item().print.hex }} />
+              </div>
+            )}
+          </Index>
         </div>
-        <div className="print-uuid">
+        <div class="print-uuid">
           {getPrintUUID()}
         </div>
       </div>
       <div
-        className="base"
+        class="base"
         style={{ 'background-image': `url(${getSourceImage('base')})` }}
       >
         <div
-          className="print"
+          class="print"
           style={{ 'background-image': `url(${getSourceImage('print')})` }}
         />
       </div>

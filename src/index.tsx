@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web';
-import { JSX } from 'solid-js/jsx-runtime';
+import router from './utils/router';
 
 import './index.scss';
 
@@ -10,9 +10,7 @@ import Repositories from './components/Repositories';
 import MerchGallery from './components/MerchGallery';
 import DesignPortfolio from '~components/DesignPortfolio';
 
-const SampleRouter: {
-  [key: string]: JSX.Element
-} = {
+const application = router({
   '*': (
     <>
       <PersonalInfo />
@@ -25,14 +23,9 @@ const SampleRouter: {
   'merch-gallery': (
     <MerchGallery />
   ),
-};
-
-function ApplicationWrapper() {
-  const route = window.location.search.replace(/\?([a-z-]+).*/, '$1');
-  return SampleRouter[route] || SampleRouter['*'];
-}
+});
 
 render(
-  ApplicationWrapper,
+  application,
   document.getElementById('root'),
 );

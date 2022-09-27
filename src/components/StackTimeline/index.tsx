@@ -1,5 +1,5 @@
+import { For } from "solid-js";
 import { STACK_GROUPS } from './defines';
-import { Stack, StackGroup } from './types';
 import StackItem from './StackItem';
 
 import './styles.scss';
@@ -10,27 +10,31 @@ export default function StackTimeline() {
     end: number
   } = {
     beg: Math.min(
-      ...STACK_GROUPS.map((group: StackGroup) => (
-        group.stacks.map((stack: Stack) => stack.beg)
+      ...STACK_GROUPS.map((group) => (
+        group.stacks.map((stack) => stack.beg)
       )).flat(),
     ),
     end: new Date().getFullYear(),
   };
 
   return (
-    <section className="stack-timeline">
-      <div className="wrapper">
+    <section class="stack-timeline">
+      <div class="wrapper">
         <h4>Development Stack</h4>
-        {STACK_GROUPS.map((group: StackGroup) => (
-          <div className="group">
-            <div className="group-name">{group.name}</div>
-            <div className="grid thin">
-              {group.stacks.map((stack: Stack) => (
-                <StackItem {...stack} range={range} />
-              ))}
+        <For each={STACK_GROUPS}>
+          {(group) => (
+            <div class="group">
+              <div class="group-name">{group.name}</div>
+              <div class="grid thin">
+                <For each={group.stacks}>
+                  {(stack) => (
+                    <StackItem {...stack} range={range} />
+                  )}
+                </For>
+              </div>
             </div>
-          </div>
-        ))}
+          )}
+        </For>
       </div>
     </section>
   );

@@ -2,17 +2,15 @@ import { SocialContact } from '~components/PersonalInfo/types';
 
 import './styles.scss';
 
-export default function ContactItem({
-  name, link,
-}: SocialContact) {
+export default function ContactItem(props: SocialContact) {
   return (
     <a
-      href={link}
+      href={props.link}
       target="_blank"
-      className={`contact-item ${name.toLocaleLowerCase()}`}
-      title={name}
+      class={`contact-item ${props.name.toLocaleLowerCase()}`}
+      title={props.name}
       rel="noreferrer"
-      aria-label={name}
+      aria-label={props.name}
     />
   );
 }

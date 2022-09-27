@@ -1,6 +1,5 @@
 {
-  "extends": ["neki/tsx"],
+  "extends": ["neki/ts-solid"],
   "rules": {
-    "react/react-in-jsx-scope": "off"
   }
 }

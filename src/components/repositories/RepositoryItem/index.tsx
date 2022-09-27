@@ -12,36 +12,36 @@ export default function RepositoryItem({
   const linkFork = `${ACCOUNT_URL}/${name}/fork`;
 
   return (
-    <div className="repository-item">
-      <div className="container">
+    <div class="repository-item">
+      <div class="container">
         <a
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="name"
+          class="name"
           title="Open repository"
         >
           {sign}
           {' '}
           {name}
         </a>
-        <div className="description">
+        <div class="description">
           {description}
         </div>
-        <div className="meta">
-          <div className="lang">{lang}</div>
-          <div className="date">{dateCreate}</div>
+        <div class="meta">
+          <div class="lang">{lang}</div>
+          <div class="date">{dateCreate}</div>
           <a
             href={linkFork}
             target="_blank"
             rel="noreferrer"
-            className="count forks"
+            class="count forks"
             title="Fork repository"
           >
             <IconFork />
             {forks}
           </a>
-          <div className="count likes">
+          <div class="count likes">
             <IconLike />
             {likes}
           </div>

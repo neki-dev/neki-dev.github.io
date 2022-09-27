@@ -1,4 +1,4 @@
-import { createResource } from 'solid-js';
+import { createResource, For } from 'solid-js';
 import { Repository } from './types';
 import { fetchRepositories } from './resources';
 import RepositoryItem from './RepositoryItem';
@@ -11,17 +11,19 @@ export default function Repositories() {
   });
 
   return (
-    <section className="repositories">
-      <div className="wrapper">
+    <section class="repositories">
+      <div class="wrapper">
         <h4>Public Repositories</h4>
         { (repositories().length > 0) ? (
-          <div className="grid large">
-            {repositories().map((repository) => (
-              <RepositoryItem {...repository} />
-            ))}
+          <div class="grid large">
+            <For each={repositories()}>
+              {(repository) => (
+                <RepositoryItem {...repository} />
+              )}
+            </For>
           </div>
         ) : (
-          <div className="content-plug" />
+          <div class="content-plug" />
         )}
       </div>
     </section>

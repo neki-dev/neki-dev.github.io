@@ -6,13 +6,13 @@ export default function JobItem({
   period, organization, position, description,
 }: Job) {
   return (
-    <div className="job-item">
-      <div className="period">
+    <div class="job-item">
+      <div class="period">
         <span>{period}</span>
       </div>
-      <div className="organization">{organization}</div>
-      <div className="position">{position}</div>
-      <div className="description">{description}</div>
+      <div class="organization">{organization}</div>
+      <div class="position">{position}</div>
+      <div class="description">{description}</div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createSignal, Index } from 'solid-js';
 import { useCatchDisplay } from '~root/hooks/use-catch-display';
 import DesignItem from './DesignItem';
 
@@ -16,28 +16,30 @@ export default function DesignPortfolio() {
   });
 
   return (
-    <section ref={refSection} className="design-portfolio">
-      <div className="wrapper">
+    <section ref={refSection} class="design-portfolio">
+      <div class="wrapper">
         <h4>Design portfolio</h4>
         { isSectionVisible() ? (
-          <div className="images">
-            <div className="current">
-              <div className="image-wrapper">
+          <div class="images">
+            <div class="current">
+              <div class="image-wrapper">
                 <img src={DESIGNS[currentImage()]} alt="" />
               </div>
             </div>
-            <div className="all">
-              { DESIGNS.map((image, index) => (
-                <DesignItem
-                  image={image}
-                  isActive={() => (index === currentImage())}
-                  onClick={() => setCurrentImage(index)}
-                />
-              )) }
+            <div class="all">
+              <Index each={DESIGNS}>
+                { (image, index) => (
+                  <DesignItem
+                    image={image()}
+                    isActive={() => (index === currentImage())}
+                    onClick={() => setCurrentImage(index)}
+                  />
+                ) }
+              </Index>
             </div>
           </div>
         ) : (
-          <div className="content-plug" />
+          <div class="content-plug" />
         )}
       </div>
     </section>

@@ -1,5 +1,5 @@
+import { For } from "solid-js";
 import { useScrollProgress } from '../../hooks/use-scroll-progress';
-import { Job } from './types';
 import { JOB_HISTORY } from './defines';
 import { getTotalWorkExperience } from './helpers';
 import JobItem from './JobItem';
@@ -16,21 +16,23 @@ export default function JobHistory() {
   });
 
   return (
-    <section ref={refSection} className="job-history">
-      <div ref={refContent} className="wrapper">
-        <div className="total">
+    <section ref={refSection} class="job-history">
+      <div ref={refContent} class="wrapper">
+        <div class="total">
           <div>
             Total work experience
-            <div className="amount">
-              <span className="number">{getTotalWorkExperience()}</span>
-              <span className="postfix">years</span>
+            <div class="amount">
+              <span class="number">{getTotalWorkExperience()}</span>
+              <span class="postfix">years</span>
             </div>
           </div>
         </div>
-        <div className="list">
-          {JOB_HISTORY.map((job: Job) => (
-            <JobItem {...job} />
-          ))}
+        <div class="list">
+          <For each={JOB_HISTORY}>
+            {(job) => (
+              <JobItem {...job} />
+            )}
+          </For>
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ export default function DesignItem({
 }: Props) {
   return (
     <div
-      className={`design-item ${isActive() ? 'active' : ''}`}
+      class={`design-item ${isActive() ? 'active' : ''}`}
       onClick={onClick}
     >
       <img src={image} alt="" />
