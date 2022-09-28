@@ -1,12 +1,12 @@
 import { onCleanup, onMount } from 'solid-js';
 
-const MIN_WIDTH_FOR_DETECT = 561;
+const MIN_WIDTH_FOR_DETECT = 560;
 
 export function useScrollProgress(
   sectionFn: () => HTMLElement,
   callback: (progress: number) => void,
 ) {
-  if (window.innerWidth < MIN_WIDTH_FOR_DETECT) {
+  if (window.innerWidth <= MIN_WIDTH_FOR_DETECT) {
     return;
   }
 
@@ -15,7 +15,8 @@ export function useScrollProgress(
     const offset = window.scrollY - section.offsetTop;
     const height = section.clientHeight;
     if (offset >= 0 && offset <= height) {
-      callback(offset / height);
+      const progress = offset / height;
+      callback(progress);
     }
   }
 
