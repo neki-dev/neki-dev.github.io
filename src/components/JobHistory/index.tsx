@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For } from 'solid-js';
 import { useScrollProgress } from '../../hooks/use-scroll-progress';
 import { JOB_HISTORY } from './defines';
 import { getTotalWorkExperience } from './helpers';

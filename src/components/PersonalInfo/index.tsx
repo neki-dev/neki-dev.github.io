@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For } from 'solid-js';
 import { useScrollProgress } from '../../hooks/use-scroll-progress';
 import { SOCIAL_CONTACTS } from './defines';
 import ContactItem from './ContactItem';

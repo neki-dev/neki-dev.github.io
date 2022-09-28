@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For } from 'solid-js';
 import { STACK_GROUPS } from './defines';
 import StackItem from './StackItem';
 

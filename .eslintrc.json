@@ -1,5 +1,3 @@
 {
-  "extends": ["neki/ts-solid"],
-  "rules": {
-  }
+  "extends": ["neki/ts-solid"]
 }
