@@ -23,12 +23,13 @@ export default function PersonalInfo() {
           <div class="name">
             <h1>Nikita Galadiy</h1>
             <h2>Full-Stack Developer</h2>
-            <span class="location">Russia, Saint-Petersburg</span>
           </div>
           <div class="contacts">
-            <For each={SOCIAL_CONTACTS}>{(contact) => (
-              <ContactItem {...contact} />
-            )}</For>
+            <For each={SOCIAL_CONTACTS}>
+              {(contact) => (
+                <ContactItem {...contact} />
+              )}
+            </For>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import emojiRegex from 'emoji-regex';
 import { Repository } from './types';
-import { ACCOUNT_USERNAME } from './defines';
+import { ACCOUNT_API_URL } from './defines';
 
 type UnformattedRepository = {
   name: string
@@ -35,13 +35,13 @@ function parseRepository(item: UnformattedRepository): Repository {
 }
 
 export async function fetchRepositories(): Promise<Repository[]> {
-  return fetch(`https://api.github.com/users/${ACCOUNT_USERNAME}/repos`)
+  return fetch(`${ACCOUNT_API_URL}/repos`)
     .then((res) => res.json())
     .then((res) => {
       let repositories: Repository[] = res.map(parseRepository);
       repositories = repositories
         .filter((repository) => !repository.ignored)
-        .sort((a, b) => (b.likes - a.likes));
+        .sort((a, b) => ((b.likes * 2 + b.forks) - (a.likes * 2 + a.forks)));
 
       return repositories;
     });
