@@ -19,10 +19,6 @@ const print: PrintVariant[] = [
   },
   {
     base: { url: base_red, hex: '#CD336F', name: 'R' },
-    print: { url: white, hex: '#FFFFFF', name: 'W' },
-  },
-  {
-    base: { url: base_red, hex: '#CD336F', name: 'R' },
     print: { url: lightblue, hex: '#00B7CC', name: 'L' },
   },
   {
