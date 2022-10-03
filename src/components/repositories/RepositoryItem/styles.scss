@@ -58,7 +58,8 @@
 
       .lang {
         padding: 1px 4px;
-        border: 1px solid color.adjust($color-second, $lightness: 10%);
+        background-color: color.adjust($color-second, $lightness: 10%);
+        color: #fff;
       }
 
       .count {

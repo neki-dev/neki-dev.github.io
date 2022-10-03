@@ -37,17 +37,17 @@ export default function RepositoryItem({
             target="_blank"
             rel="noreferrer"
             class="count forks"
-            title="Fork repository"
+            title="Forks"
           >
             <IconFork />
             {forks}
           </a>
-          <div class="count likes">
+          <div class="count likes" title="Likes">
             <IconLike />
             {likes}
           </div>
           { (downloads !== undefined) && (
-            <div class="count downloads">
+            <div class="count downloads" title="Downloads per last month">
               <IconDownload />
               {downloads}
             </div>
