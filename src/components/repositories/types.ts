@@ -4,6 +4,7 @@ export type Repository = {
   sign?: string
   ignored?: boolean
   lang?: string
+  downloads?: number
   forks: number
   likes: number
   dateCreate: string
