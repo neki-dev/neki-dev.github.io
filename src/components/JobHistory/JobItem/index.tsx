@@ -1,4 +1,4 @@
-import { Job } from '~components/JobHistory/types';
+import { Job } from '~types';
 
 import './styles.scss';
 

@@ -1,28 +1,8 @@
 import emojiRegex from 'emoji-regex';
-import { ACCOUNT_USERNAME } from './defines';
-import { Repository } from './types';
+import { Repository, UnformattedRepository } from '~types';
+import { fetchPackagesDownloads } from './packages-downloads';
 
-type UnformattedRepository = {
-  name: string
-  language?: string
-  description: string
-  forks_count: number
-  stargazers_count: number
-  created_at: string
-};
-
-type UnformattedPackageDownloads = {
-  package: string
-  downloads: Array<{
-    day: string
-    downloads: number
-  }>
-};
-
-type PackageDownloads = {
-  [key in string]: number
-};
-
+const ACCOUNT_USERNAME = 'neki-dev';
 const IGNORED_SINGS = ['🥷🏼', '⛔'];
 
 function parseDate(date: string): string {
@@ -44,21 +24,6 @@ function parseRepository(item: UnformattedRepository): Repository {
     dateCreate: parseDate(item.created_at),
     ignored: signs.some((sign) => IGNORED_SINGS.includes(sign)),
   };
-}
-
-async function fetchPackagesDownloads(repositories: Repository[]): Promise<PackageDownloads> {
-  const allNames = repositories.map((repository) => repository.name).join(',');
-
-  return fetch(`https://api.npmjs.org/downloads/range/last-month/${allNames}`)
-    .then((res) => res.json())
-    .then((res) => {
-      const meta = Object.values(res).filter((data) => data) as UnformattedPackageDownloads[];
-
-      return meta.reduce((curr, item) => ({
-        ...curr,
-        [item.package]: item.downloads.reduce((total, info) => (total + info.downloads), 0),
-      }), {});
-    });
 }
 
 export async function fetchRepositories(): Promise<Repository[]> {

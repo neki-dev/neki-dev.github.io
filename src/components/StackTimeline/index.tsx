@@ -1,5 +1,5 @@
 import { For } from 'solid-js';
-import { STACK_GROUPS } from './defines';
+import { STACK_GROUPS } from '~data';
 import StackItem from './StackItem';
 
 import './styles.scss';

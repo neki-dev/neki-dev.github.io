@@ -1,4 +1,4 @@
-import { Stack } from '~components/StackTimeline/types';
+import { Stack } from '~types';
 
 import './styles.scss';
 

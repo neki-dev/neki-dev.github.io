@@ -1,7 +1,7 @@
 import { createSignal, Index } from 'solid-js';
+import { PrintVariant } from '~types';
 
-import { PrintVariant } from './types';
-import prints from './images/print';
+import PRINTS from './images/print';
 
 import './styles.scss';
 
@@ -15,12 +15,12 @@ export default function MerchGallery() {
   }
 
   function getSourceImage(type: keyof PrintVariant) {
-    return prints[model()]?.variants[variant()]?.[type].url;
+    return PRINTS[model()]?.variants[variant()]?.[type].url;
   }
 
   function getPrintUUID() {
-    const modelKey = prints[model()].name.toUpperCase().replace(/[\sEYUIOA]/g, '');
-    const { base, print } = prints[model()].variants[variant()];
+    const modelKey = PRINTS[model()].name.toUpperCase().replace(/[\sEYUIOA]/g, '');
+    const { base, print } = PRINTS[model()].variants[variant()];
     return [modelKey, base.name, print.name].join('-');
   }
 
@@ -28,7 +28,7 @@ export default function MerchGallery() {
     <section class="merch-gallery">
       <div class="selectors">
         <div class="model-selector">
-          <Index each={prints}>
+          <Index each={PRINTS}>
             {(item, index) => (
               <div
                 class={`model ${(index === model()) ? 'active' : ''}`}
@@ -40,7 +40,7 @@ export default function MerchGallery() {
           </Index>
         </div>
         <div class="variant-selector">
-          <Index each={prints[model()].variants}>
+          <Index each={PRINTS[model()].variants}>
             {(item, index) => (
               <div
                 class={`variant ${(index === variant()) ? 'active' : ''}`}

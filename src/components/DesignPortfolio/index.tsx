@@ -1,5 +1,5 @@
 import { createSignal, Index } from 'solid-js';
-import { useCatchDisplay } from '~root/hooks/use-catch-display';
+import { useCatchDisplay } from '~hooks';
 import DesignItem from './DesignItem';
 
 import DESIGNS from './images/designs';

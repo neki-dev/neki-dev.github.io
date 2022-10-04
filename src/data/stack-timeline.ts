@@ -1,4 +1,4 @@
-import { StackGroup } from './types';
+import { StackGroup } from '~types';
 
 export const STACK_GROUPS: StackGroup[] = [
   {

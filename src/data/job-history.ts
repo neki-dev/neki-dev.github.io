@@ -1,4 +1,4 @@
-import { Job } from './types';
+import { Job } from '~types';
 
 export const JOB_HISTORY: Job[] = [
   {

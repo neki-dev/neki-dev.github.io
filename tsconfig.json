@@ -12,8 +12,13 @@
     "resolveJsonModule": true,
     "types": ["vite/client"],
     "paths": {
-      "~components/*": ["./src/components/*"],
-      "~root/*": ["./src/*"]
+      "~root/*": ["./src/*"],
+      "~component/*": ["./src/components/*"],
+      "~util/*": ["./src/utils/*"],
+      "~types": ["./src/types/index.ts"],
+      "~hooks": ["./src/hooks/index.ts"],
+      "~resources": ["./src/resources/index.ts"],
+      "~data": ["./src/data/index.ts"]
     }
   }
 }

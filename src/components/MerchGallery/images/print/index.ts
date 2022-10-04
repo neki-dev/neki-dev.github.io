@@ -1,4 +1,4 @@
-import { Print } from '../../types';
+import { Print } from '../../../../types/merch';
 
 import neki from './neki';
 import badDuck from './bad-duck';

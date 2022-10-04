@@ -1,6 +1,6 @@
 import { createResource, For } from 'solid-js';
-import { Repository } from './types';
-import { fetchRepositories } from './resources';
+import { Repository } from '~types';
+import { fetchRepositories } from '~resources';
 import RepositoryItem from './RepositoryItem';
 
 import './styles.scss';
