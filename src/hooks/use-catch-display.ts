@@ -10,8 +10,10 @@ export function useCatchDisplay(
       return false;
     }
 
-    const offset = window.scrollY + window.innerHeight;
-    return (offset >= section.offsetTop);
+    const bound = section.getBoundingClientRect();
+    const offset = bound.top - window.innerHeight;
+
+    return (offset <= 0);
   }
 
   function onScroll() {
