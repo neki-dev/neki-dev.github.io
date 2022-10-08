@@ -1,2 +1,2 @@
 ## 🥷🏼 Personal website [neki.guru](https://neki.guru)
-![Preview](https://files.neki.guru/banner.png)
+![](https://files.neki.guru/card.png)
