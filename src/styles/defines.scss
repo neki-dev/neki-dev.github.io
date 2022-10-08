@@ -1,0 +1,33 @@
+@mixin screen($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+// Colors
+$color-main: #6c4091;
+$color-second: #b19ae4;
+$color-light: #d8c6ff;
+$color-dark: #150e1c;
+$color-dark-dim: #202f41;
+
+// Font sizes
+$font-size-xxs: 7pt;
+$font-size-xs: 9pt;
+$font-size-s: 11pt;
+$font-size-m: 14pt;
+$font-size-l: 16pt;
+$font-size-xl: 24pt;
+$font-size-xxl: 30pt;
+
+// Spaces
+$gap-xs: 6px;
+$gap-s: 10px;
+$gap-m: 25px;
+$gap-l: 40px;
+$gap-xl: 70px;
+
+// Screen sizes
+$media-size-s: 560px;
+$media-size-m: 900px;
+$media-size-l: 1200px;

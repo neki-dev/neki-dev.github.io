@@ -1,0 +1,67 @@
+@import "~style/defines";
+
+section.design-portfolio {
+  > .wrapper > h4 {
+    color: $color-dark-dim;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 44% auto;
+    grid-gap: $gap-m;
+
+    .current {
+      .image-wrapper {
+        box-shadow: 0 0 40px #f5f5f5;
+        background: #eee;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    .all {
+      display: grid;
+      grid-auto-rows: min-content;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: $gap-s;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.design-portfolio .images {
+    grid-template-columns: 50% auto;
+
+    .all {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.design-portfolio .images {
+    grid-template-columns: 60% auto;
+
+    .all {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.design-portfolio .images {
+    grid-template-columns: 100%;
+
+    .current .image-wrapper {
+      box-shadow: none;
+      border: 1px solid #eee;
+    }
+
+    .all {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

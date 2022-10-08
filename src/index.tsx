@@ -1,28 +1,14 @@
 import { render } from 'solid-js/web';
-import { router } from '~util/router';
+import { router } from '~utils';
 
-import './index.scss';
+import '~style/index.scss';
 
-import StackTimeline from '~component/StackTimeline';
-import PersonalInfo from '~component/PersonalInfo';
-import JobHistory from '~component/JobHistory';
-import Repositories from '~component/Repositories';
-import MerchGallery from '~component/MerchGallery';
-import DesignPortfolio from '~component/DesignPortfolio';
+import { Home } from '~page/Home';
+import { MerchGallery } from '~page/MerchGallery';
 
 const application = router({
-  '*': (
-    <>
-      <PersonalInfo />
-      <StackTimeline />
-      <JobHistory />
-      <Repositories />
-      <DesignPortfolio />
-    </>
-  ),
-  'merch-gallery': (
-    <MerchGallery />
-  ),
+  '*': <Home />,
+  'merch-gallery': <MerchGallery />,
 });
 
 render(

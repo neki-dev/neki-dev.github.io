@@ -1,0 +1,124 @@
+@import "~style/defines";
+
+$logotype-width: 409px;
+$logotype-height: 80px;
+
+section.personal-info {
+  height: 100vh;
+  background: #fff url("./images/background.png") center top no-repeat;
+  background-size: auto 100vh;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  > .wrapper {
+    height: 100%;
+  }
+
+  .me {
+    position: absolute;
+    left: 40%;
+    right: 0;
+    bottom: 0;
+    top: 12%;
+    background: url("./images/me.png") left top no-repeat;
+    background-size: 100%;
+    pointer-events: none;
+  }
+
+  .content {
+    padding-top: 7%;
+
+    .logotype {
+      width: $logotype-width;
+      height: $logotype-height;
+      background: url("./images/logotype.svg") no-repeat;
+      background-size: 100%;
+    }
+
+    .name {
+      margin-top: $gap-l;
+
+      h1 {
+        font-size: 60pt;
+        line-height: 60pt * 0.9;
+        margin-left: -6px;
+      }
+
+      h2 {
+        margin-top: $gap-s;
+        margin-left: -3px;
+        font-size: $font-size-xl;
+        line-height: $font-size-xl * 0.9;
+        font-weight: 100;
+      }
+    }
+
+    .contacts {
+      margin-top: $gap-l;
+      display: inline-grid;
+      grid-auto-flow: column;
+      grid-gap: $gap-m;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.personal-info {
+    background-position: center 100px;
+
+    .me {
+      top: 8%;
+      left: 50%;
+      background-position-y: bottom;
+      background-size: auto 100%;
+    }
+
+    .content {
+      max-width: 50%;
+      padding-top: 10%;
+
+      .logotype {
+        width: $logotype-width * 0.8;
+        height: $logotype-height * 0.8;
+      }
+
+      .name {
+        h1 {
+          font-size: 50pt;
+          line-height: 50pt * 0.9;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-size: $font-size-l;
+          line-height: $font-size-l * 0.9;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.personal-info {
+    height: auto;
+
+    .me {
+      opacity: 0.15;
+      left: 30%;
+      bottom: -10%;
+      background-size: auto 100%;
+    }
+
+    .content {
+      max-width: none;
+      position: relative;
+      z-index: 2;
+      padding-bottom: 7%;
+
+      .logotype {
+        width: $logotype-width * 0.6;
+        height: $logotype-height * 0.6;
+      }
+    }
+  }
+}

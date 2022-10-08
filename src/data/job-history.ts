@@ -1,5 +1,11 @@
 import { Job } from '~types';
 
+const JOB_START_TIMESTAMP = 1404172800;
+
+export const JOB_TOTAL_EXPERIENCE = (
+  (Date.now() / 1000 - JOB_START_TIMESTAMP) / 31536000
+).toFixed(1);
+
 export const JOB_HISTORY: Job[] = [
   {
     organization: 'Alfa-Bank',

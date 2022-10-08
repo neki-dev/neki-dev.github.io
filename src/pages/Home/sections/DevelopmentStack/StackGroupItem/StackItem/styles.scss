@@ -1,0 +1,99 @@
+@import "~style/defines";
+
+.stack-item {
+  position: relative;
+  color: $color-light;
+  border: 1px solid rgba($color-main, 0.2);
+  padding: 18px 20px;
+
+  &.actual {
+    background-color: rgba($color-main, 0.1);
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      margin-right: $gap-s;
+    }
+
+    .name {
+      color: #fff;
+      font-weight: bold;
+      font-size: $font-size-l;
+      line-height: $font-size-l;
+    }
+  }
+
+  .experience {
+    display: flex;
+    align-items: center;
+    margin-top: $gap-s;
+
+    .number {
+      margin-right: 4px;
+      font-size: $font-size-s;
+      line-height: $font-size-s;
+      font-weight: bold;
+    }
+
+    .postfix {
+      font-size: $font-size-xs;
+      line-height: $font-size-xs;
+    }
+  }
+
+  .timeline {
+    height: 26px;
+    margin-top: $gap-s;
+
+    .bar {
+      height: 10px;
+      background: rgba($color-second, 0.3);
+
+      .container {
+        position: relative;
+      }
+
+      .moment {
+        position: absolute;
+        height: 10px;
+        background: linear-gradient(to right, $color-second, #fff);
+
+        span {
+          position: absolute;
+          z-index: 2;
+          font-size: $font-size-xxs;
+          line-height: $font-size-xxs;
+          padding-top: 14px;
+
+          &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            background-color: #fff;
+            top: 0;
+            height: 14px;
+            left: 50%;
+          }
+
+          &.beg {
+            left: 0;
+            padding-left: 2px;
+            transform: translateX(-50%);
+          }
+
+          &.end {
+            right: 0;
+            padding-right: 2px;
+            transform: translateX(50%);
+          }
+        }
+      }
+    }
+  }
+}

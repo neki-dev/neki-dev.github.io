@@ -1,0 +1,119 @@
+@import "~style/defines";
+
+section.job-history {
+  background-color: #000;
+
+  .total {
+    color: #fff;
+    font-size: $font-size-xxl;
+    line-height: $font-size-xxl;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 9%;
+
+    .amount {
+      display: flex;
+      align-items: flex-start;
+
+      .number {
+        font-size: $font-size-xxl * 1.5;
+        line-height: $font-size-xxl * 1.5;
+        margin-right: 7px;
+      }
+
+      .postfix {
+        font-size: $font-size-xxl * 0.9;
+        line-height: $font-size-xxl * 0.9;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    grid-gap: 5vw 3vw;
+    margin-bottom: 4%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: #444;
+      left: 0;
+      right: 0;
+      top: 7px;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  section.job-history {
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .total {
+      font-size: $font-size-xxl * 0.9;
+      line-height: $font-size-xxl * 0.9;
+
+      span {
+        font-size: $font-size-xxl * 0.9 * 0.9;
+        line-height: $font-size-xxl * 0.9 * 0.9;
+
+        b {
+          font-size: $font-size-xxl * 1.5 * 0.9;
+          line-height: $font-size-xxl * 1.5 * 0.9;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.job-history {
+    .total {
+      font-size: $font-size-xxl * 0.8;
+      line-height: $font-size-xxl * 0.8;
+
+      span {
+        font-size: $font-size-xxl * 0.9 * 0.8;
+        line-height: $font-size-xxl * 0.9 * 0.8;
+
+        b {
+          font-size: $font-size-xxl * 1.5 * 0.8;
+          line-height: $font-size-xxl * 1.5 * 0.8;
+        }
+      }
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.job-history {
+    .list {
+      grid-template-columns: 1fr;
+      grid-gap: 7vw;
+    }
+
+    .total {
+      font-size: $font-size-xxl * 0.7;
+      line-height: $font-size-xxl * 0.7;
+
+      span {
+        font-size: $font-size-xxl * 0.9 * 0.7;
+        line-height: $font-size-xxl * 0.9 * 0.7;
+
+        b {
+          font-size: $font-size-xxl * 1.5 * 0.7;
+          line-height: $font-size-xxl * 1.5 * 0.7;
+        }
+      }
+    }
+  }
+}

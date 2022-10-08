@@ -1,0 +1,124 @@
+@use "sass:color";
+@import "~style/defines";
+
+.repository-item {
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(255 255 255 / 40%);
+    padding: 30px 35px;
+    transition: background-color 0.4s ease-out;
+
+    .link {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .name {
+      margin-bottom: $gap-m;
+      color: $color-main;
+      font-weight: bold;
+      font-size: $font-size-l;
+      line-height: $font-size-l;
+      text-transform: lowercase;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .description {
+      color: color.adjust($color-dark, $lightness: 10%);
+      flex: 1;
+      font-weight: 100;
+      font-size: $font-size-s;
+      line-height: $font-size-s + 0.5pt;
+      margin-bottom: $gap-m;
+
+      > span {
+        display: block;
+        text-transform: uppercase;
+        margin-top: 5px;
+        font-size: $font-size-xs;
+        opacity: 0.75;
+      }
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      color: $color-second;
+      font-size: $font-size-xs;
+      line-height: $font-size-xs;
+      font-weight: 100;
+
+      > *:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      .lang {
+        padding: 1px 4px;
+        background-color: color.adjust($color-second, $lightness: 10%);
+        color: #fff;
+      }
+
+      .count {
+        display: flex;
+        text-decoration: none;
+        color: $color-second;
+        align-items: center;
+
+        svg {
+          margin-right: 5px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #fff;
+      animation: impulse-effect 0.4s ease-out;
+    }
+  }
+}
+
+@include screen($media-size-l) {
+  .repository-item .container .name {
+    font-size: $font-size-l * 0.95;
+    line-height: $font-size-l * 0.95;
+  }
+}
+
+@include screen($media-size-m) {
+  .repository-item .container .name {
+    font-size: $font-size-l * 0.9;
+    line-height: $font-size-l * 0.9;
+  }
+}
+
+@include screen($media-size-s) {
+  .repository-item .container {
+    padding: 20px 25px;
+
+    .name {
+      font-size: $font-size-l * 0.8;
+      line-height: $font-size-l * 0.8;
+    }
+  }
+}
+
+@keyframes impulse-effect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255 255 255 / 50%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255 255 255 / 0%);
+  }
+}
