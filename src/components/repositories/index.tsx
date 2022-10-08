@@ -6,15 +6,13 @@ import RepositoryItem from './RepositoryItem';
 import './styles.scss';
 
 export default function Repositories() {
-  const [repositories] = createResource<Repository[]>(fetchRepositories, {
-    initialValue: [],
-  });
+  const [repositories] = createResource<Repository[]>(fetchRepositories);
 
   return (
     <section class="repositories">
       <div class="wrapper">
         <h4>Public Repositories</h4>
-        { (repositories().length > 0) ? (
+        { repositories() ? (
           <div class="grid large">
             <For each={repositories()}>
               {(repository) => (
