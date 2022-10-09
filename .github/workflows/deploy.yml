@@ -24,10 +24,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Build
+      - name: Build with Vite
         run: |
           npm install
           npm run build
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./dist
+          destination: ./_site
 
   # Deployment job
   deploy:
@@ -39,8 +44,6 @@ jobs:
     steps:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
