@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import SVGInjectPlugin from 'vite-plugin-svg-inject';
@@ -12,7 +13,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     polyfillDynamicImport: false,
-    outDir: '../',
+    outDir: '../dist',
   },
   resolve: {
     alias: alias(__dirname)

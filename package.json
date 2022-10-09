@@ -17,7 +17,6 @@
   "scripts": {
     "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "start": "vite",
-    "rebuild": "rm -r ./assets & vite build",
     "build": "vite build"
   },
   "devDependencies": {

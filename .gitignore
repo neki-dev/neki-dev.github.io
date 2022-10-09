@@ -1,6 +1,5 @@
 .git
 .idea
 node_modules/
-assets/
-index.html
+dist/
 .DS_Store
