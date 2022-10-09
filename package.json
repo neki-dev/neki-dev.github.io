@@ -9,9 +9,6 @@
   },
   "license": "MIT",
   "main": "index.html",
-  "engines": {
-    "node": ">=10.16"
-  },
   "browserslist": [
     "last 2 years",
     "> 1%",
@@ -20,7 +17,8 @@
   "scripts": {
     "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "start": "vite",
-    "build": "rm -r ./assets & vite build"
+    "rebuild": "rm -r ./assets & vite build",
+    "build": "vite build"
   },
   "devDependencies": {
     "alias-reuse": "^1.0.10",

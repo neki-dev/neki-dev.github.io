@@ -1,4 +1,6 @@
 .git
 .idea
 node_modules/
+assets/
+index.html
 .DS_Store
