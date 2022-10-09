@@ -19,17 +19,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - name: Build
-      run: |
-        npm install
-        npm run build
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Build
+        run: |
+          npm install
+          npm run build
 
   # Deployment job
   deploy:
@@ -39,6 +37,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
