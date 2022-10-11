@@ -1,5 +1,5 @@
 import { Component, createMemo, For } from 'solid-js';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import './styles.scss';
 
@@ -16,7 +16,7 @@ export const Skeleton: Component<Props> = (props) => {
     <For each={repeats()}>
       {() => (
         <div
-          class={classnames('skeleton-item', {
+          class={cn('skeleton-item', {
             inverse: props.inverse,
           })}
           style={{

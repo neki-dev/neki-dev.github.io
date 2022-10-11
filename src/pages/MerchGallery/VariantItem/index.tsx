@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import { PrintVariant } from '~types';
 
@@ -13,7 +13,7 @@ type Props = PrintVariant & {
 export const VariantItem: Component<Props> = (props) => (
   <div
     onClick={() => props.onClick()}
-    class={classnames('variant-item', {
+    class={cn('variant-item', {
       active: props.isActive,
     })}
   >

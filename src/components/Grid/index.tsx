@@ -1,5 +1,5 @@
 import { JSX, Component } from 'solid-js';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import './styles.scss';
 
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const Grid: Component<Props> = (props) => (
-  <div class={classnames('grid', {
+  <div class={cn('grid', {
     large: props.large,
     compact: props.compact,
   })}>

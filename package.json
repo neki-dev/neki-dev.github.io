@@ -1,14 +1,14 @@
 {
   "name": "neki.guru",
   "description": "Personal website",
-  "version": "3.9.2",
+  "version": "3.9.3",
   "author": {
     "name": "Nikita Galadiy",
     "email": "dev@neki.guru",
     "url": "https://neki.guru/"
   },
   "license": "MIT",
-  "main": "dist/index.html",
+  "main": "src/index.html",
   "browserslist": [
     "last 2 years",
     "> 1%",

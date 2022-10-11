@@ -1,4 +1,5 @@
 import { render } from 'solid-js/web';
+
 import { router } from '~utils';
 
 import '~style/index.scss';
@@ -11,7 +12,5 @@ const application = router({
   'merch-gallery': <MerchGallery />,
 });
 
-render(
-  application,
-  document.getElementById('root'),
-);
+const root = document.getElementById('root');
+render(application, root);

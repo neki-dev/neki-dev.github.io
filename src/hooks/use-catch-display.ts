@@ -1,16 +1,16 @@
 import { onCleanup, onMount } from 'solid-js';
 
 export function useCatchDisplay(
-  sectionFn: () => HTMLElement,
+  ref: () => HTMLElement,
   callback: () => void,
 ) {
   function checkDisplay(): boolean {
-    const section = sectionFn();
-    if (!section) {
+    const element = ref();
+    if (!element) {
       return false;
     }
 
-    const bound = section.getBoundingClientRect();
+    const bound = element.getBoundingClientRect();
     const offset = bound.top - window.innerHeight;
 
     return (offset <= 0);
