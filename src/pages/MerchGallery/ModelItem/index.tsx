@@ -1,4 +1,5 @@
 import { Component } from 'solid-js';
+import classnames from 'classnames';
 
 import './styles.scss';
 
@@ -10,8 +11,10 @@ type Props = {
 
 export const ModelItem: Component<Props> = (props) => (
   <div
-    class={`model-item ${props.isActive ? 'active' : ''}`}
     onClick={() => props.onClick()}
+    class={classnames('model-item', {
+      active: props.isActive,
+    })}
   >
     {props.name}
   </div>

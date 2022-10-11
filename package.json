@@ -1,7 +1,7 @@
 {
   "name": "neki.guru",
   "description": "Personal website",
-  "version": "3.9.1",
+  "version": "3.9.2",
   "author": {
     "name": "Nikita Galadiy",
     "email": "dev@neki.guru",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "alias-reuse": "^1.0.10",
     "eslint": "^8.25.0",
-    "eslint-config-neki": "^1.0.3",
+    "eslint-config-neki": "^1.0.4",
     "sass": "^1.44.0",
     "stylelint": "^14.13.0",
     "stylelint-config-standard-scss": "^5.0.0",
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "babel-preset-solid": "^1.5.7",
+    "classnames": "^2.3.2",
     "emoji-regex": "^10.2.1",
     "solid-js": "^1.5.7"
   }

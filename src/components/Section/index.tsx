@@ -3,10 +3,10 @@ import { JSX, Component } from 'solid-js';
 import './styles.scss';
 
 type Props = {
-  label?: string;
-  children: JSX.Element;
-  ref?: HTMLElement;
-  class: string;
+  label?: string
+  children: JSX.Element
+  ref?: HTMLElement
+  class: string
 };
 
 export const Section: Component<Props> = (props) => (

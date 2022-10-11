@@ -4,6 +4,7 @@ import { Repository } from '~types';
 import { fetchRepositories } from '~resources';
 import { Section } from '~component/Section';
 import { Skeleton } from '~component/Skeleton';
+import { Grid } from '~component/Grid';
 import { RepositoryItem } from './RepositoryItem';
 
 import './styles.scss';
@@ -13,15 +14,15 @@ export const Repositories: Component = () => {
 
   return (
     <Section class="repositories" label="Public Repositories">
-      <div class="grid large">
+      <Grid large>
         { repositories() ? (
-            <For each={repositories()}>
-              {RepositoryItem}
-            </For>
+          <For each={repositories()}>
+            {RepositoryItem}
+          </For>
         ) : (
           <Skeleton repeat={6} height={160} />
         )}
-      </div>
+      </Grid>
     </Section>
   );
 };

@@ -1,4 +1,5 @@
 import { Component } from 'solid-js';
+import classnames from 'classnames';
 
 import './styles.scss';
 
@@ -10,8 +11,10 @@ type Props = {
 
 export const DesignItem: Component<Props> = (props) => (
   <div
-    class={`design-item ${props.isActive ? 'active' : ''}`}
     onClick={() => props.onClick()}
+    class={classnames('design-item', {
+      active: props.isActive,
+    })}
   >
     <img src={props.image} alt="" />
   </div>

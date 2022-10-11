@@ -1,6 +1,7 @@
 import { Component, For } from 'solid-js';
 
 import { StackGroup } from '~types';
+import { Grid } from '~component/Grid';
 import { StackItem } from './StackItem';
 
 import './styles.scss';
@@ -8,10 +9,10 @@ import './styles.scss';
 export const StackGroupItem: Component<StackGroup> = (props) => (
   <div class="stack-group-item">
     <div class="group-name">{props.name}</div>
-    <div class="grid thin">
+    <Grid compact>
       <For each={props.stacks}>
         {StackItem}
       </For>
-    </div>
+    </Grid>
   </div>
 );

@@ -1,0 +1,41 @@
+@import "~style/defines";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2vw;
+
+  &.large {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.compact {
+    grid-gap: 1vw;
+  }
+}
+
+@include screen($media-size-l) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    &.large {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    &.large {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,11 +1,12 @@
 import { Component, createMemo, For } from 'solid-js';
+import classnames from 'classnames';
 
 import './styles.scss';
 
 type Props = {
-  repeat?: number;
-  height?: number;
-  inverse?: boolean;
+  repeat?: number
+  height?: number
+  inverse?: boolean
 };
 
 export const Skeleton: Component<Props> = (props) => {
@@ -15,8 +16,12 @@ export const Skeleton: Component<Props> = (props) => {
     <For each={repeats()}>
       {() => (
         <div
-          class={`skeleton-item ${props.inverse ? 'inverse' : ''}`}
-          style={{ height: `${props.height || 64}px` }}
+          class={classnames('skeleton-item', {
+            inverse: props.inverse,
+          })}
+          style={{
+            height: `${props.height || 64}px`,
+          }}
         />
       )}
     </For>
