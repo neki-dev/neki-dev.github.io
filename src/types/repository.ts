@@ -1,5 +1,6 @@
 export type UnformattedRepository = {
   name: string
+  fork: boolean
   language?: string
   description: string
   forks_count: number

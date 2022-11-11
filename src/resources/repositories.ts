@@ -29,9 +29,10 @@ function parseRepository(item: UnformattedRepository): Repository {
 export async function fetchRepositories(): Promise<Repository[]> {
   return fetch(`https://api.github.com/users/${ACCOUNT_USERNAME}/repos`)
     .then((res) => res.json())
-    .then(async (res) => {
-      let repositories: Repository[] = res.map(parseRepository);
-      repositories = repositories
+    .then(async (res: UnformattedRepository[]) => {
+      const repositories = res
+        .filter((repository) => !repository.fork)
+        .map(parseRepository)
         .filter((repository) => !repository.ignored)
         .sort((a, b) => ((b.likes * 2 + b.forks) - (a.likes * 2 + a.forks)));
 
