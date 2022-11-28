@@ -7,6 +7,7 @@ import './styles.scss';
 
 type Props = {
   image: string
+  name: string
   isActive: boolean
   onClick: () => void
 };
@@ -18,7 +19,6 @@ export const DesignItem: Component<Props> = (props) => {
     const image = new Image();
     image.onload = () => {
       setLoaded(true);
-      console.log('loaded', props.image);
     };
     image.src = props.image;
   });
@@ -26,6 +26,7 @@ export const DesignItem: Component<Props> = (props) => {
   return (
     <div
       onClick={() => props.onClick()}
+      title={props.name}
       class={cn('design-item', {
         active: props.isActive,
       })}

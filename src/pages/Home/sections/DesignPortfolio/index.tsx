@@ -16,14 +16,15 @@ export const DesignPortfolio: Component = () => {
       <div class="images">
         <div class="current">
           <div class="image-wrapper">
-            <img src={DESIGNS[currentImage()]} alt="" />
+            <img src={DESIGNS[currentImage()][0]} alt="" />
           </div>
         </div>
         <div class="all">
           <Index each={DESIGNS}>
-            { (image, index) => (
+            { (item, index) => (
               <DesignItem
-                image={image()}
+                image={item()[0]}
+                name={item()[1]}
                 isActive={index === currentImage()}
                 onClick={() => setCurrentImage(index)}
               />
