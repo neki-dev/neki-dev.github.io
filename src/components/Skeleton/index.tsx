@@ -20,7 +20,7 @@ export const Skeleton: Component<Props> = (props) => {
             inverse: props.inverse,
           })}
           style={{
-            height: `${props.height || 64}px`,
+            height: props.height ? `${props.height}px` : '100%',
           }}
         />
       )}

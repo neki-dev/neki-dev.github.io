@@ -20,7 +20,7 @@ export const Repositories: Component = () => {
             {RepositoryItem}
           </For>
         ) : (
-          <Skeleton repeat={6} height={160} />
+          <Skeleton repeat={9} height={177} />
         )}
       </Grid>
     </Section>
