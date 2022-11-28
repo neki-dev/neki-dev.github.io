@@ -37,21 +37,21 @@ section {
 }
 
 @include screen($media-size-l) {
-  section > .wrapper > h4 {
+  section .section-label h4 {
     font-size: $font-size-xxl * 0.9;
     line-height: $font-size-xxl * 0.9;
   }
 }
 
 @include screen($media-size-m) {
-  section > .wrapper > h4 {
+  section .section-label h4 {
     font-size: $font-size-xxl * 0.8;
     line-height: $font-size-xxl * 0.8;
   }
 }
 
 @include screen($media-size-s) {
-  section > .wrapper > h4 {
+  section .section-label h4 {
     font-size: $font-size-xxl * 0.7;
     line-height: $font-size-xxl * 0.7;
   }

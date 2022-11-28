@@ -23,11 +23,14 @@ export function useCatchDisplay(
   }
 
   onMount(() => {
-    if (checkDisplay()) {
-      callback();
-    } else {
-      document.addEventListener('scroll', onScroll);
-    }
+    // Promise is needed for waiting mount ref
+    Promise.resolve().then(() => {
+      if (checkDisplay()) {
+        callback();
+      } else {
+        document.addEventListener('scroll', onScroll);
+      }
+    });
   });
 
   onCleanup(() => {
