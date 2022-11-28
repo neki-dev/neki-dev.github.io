@@ -3,8 +3,11 @@
 section.stack-timeline {
   background-color: #081422;
 
-  > .wrapper > h4 {
-    color: #fff;
+  .section-label {
     border-color: #28394e;
+
+    h4 {
+      color: #fff;
+    }
   }
 }

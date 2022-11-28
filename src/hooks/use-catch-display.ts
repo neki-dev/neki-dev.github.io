@@ -11,9 +11,8 @@ export function useCatchDisplay(
     }
 
     const bound = element.getBoundingClientRect();
-    const offset = bound.top - window.innerHeight;
 
-    return (offset <= 0);
+    return (bound.top <= window.innerHeight);
   }
 
   function onScroll() {

@@ -11,15 +11,27 @@ section {
     margin: 0 auto;
     max-width: calc($section-wrapper-max-width + $section-wrapper-padding);
     padding: $section-wrapper-padding;
+  }
 
-    > h4 {
+  .section-label {
+    margin-bottom: 9%;
+    border-bottom: 1px solid $color-light;
+    padding-bottom: 3%;
+
+    h4 {
+      display: block;
       font-size: $font-size-xxl;
       line-height: $font-size-xxl;
+      color: $color-dark-dim;
       text-transform: uppercase;
-      margin-bottom: 9%;
-      display: block;
-      border-bottom: 1px solid $color-light;
-      padding-bottom: 3%;
+      transition: all 0.5s ease-out;
+      transform: translateY(125%);
+      opacity: 0;
+
+      &.animate {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   }
 }
