@@ -1,4 +1,5 @@
 import { Component, createMemo } from 'solid-js';
+import cn from 'classnames';
 
 import { STACK_NOW_YEAR, STACK_BEG_YEAR, STACK_SIZE } from '~data';
 import { Stack } from '~types';
@@ -7,10 +8,13 @@ import './styles.scss';
 
 export const StackItem: Component<Stack> = (props) => {
   const offsetBeg = createMemo(() => ((props.beg - STACK_BEG_YEAR) * STACK_SIZE));
-  const offsetEnd = createMemo(() => ((STACK_NOW_YEAR - props.end) * STACK_SIZE));
+  const offsetEnd = createMemo(() => (props.end ? ((STACK_NOW_YEAR - props.end) * STACK_SIZE) : 0));
+  const experienceYears = createMemo(() => ((props.end || STACK_NOW_YEAR) - props.beg));
 
   return (
-    <div class={`stack-item ${props.end ? '' : 'actual'}`}>
+    <div class={cn('stack-item', {
+      actual: !props.end,
+    })}>
       <div class="info">
         <div
           class="icon"
@@ -21,12 +25,12 @@ export const StackItem: Component<Stack> = (props) => {
         <div class="name">{props.name}</div>
       </div>
       <div class="experience">
-        <span class="number">{props.end - props.beg}</span>
+        <span class="number">{experienceYears()}</span>
         <span class="postfix">
-          {(props.end - props.beg === 1) ? 'year' : 'years'}
+          {(experienceYears() === 1) ? 'year' : 'years'}
           {' '}
           experience
-          {(props.end < STACK_NOW_YEAR) && ', not actual'}
+          {props.end && ', not actual'}
         </span>
       </div>
       <div class="timeline">
@@ -40,7 +44,7 @@ export const StackItem: Component<Stack> = (props) => {
               }}
             >
               <span class="beg">{props.beg}</span>
-              <span class="end">{props.end || 'Now'}</span>
+              <span class="end">{props.end || 'now'}</span>
             </div>
           </div>
         </div>

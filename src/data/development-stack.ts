@@ -9,13 +9,13 @@ export const STACK_GROUPS: StackGroup[] = [
     name: 'Layout',
     stacks: [
       {
-        name: 'HTML', beg: 2011, end: STACK_NOW_YEAR, color: ['#f58442', '#ff9d63'],
+        name: 'HTML', beg: 2011, color: ['#f58442', '#ff9d63'],
       },
       {
-        name: 'CSS', beg: 2011, end: STACK_NOW_YEAR, color: ['#267abf', '#4ca0e6'],
+        name: 'CSS', beg: 2011, color: ['#267abf', '#4ca0e6'],
       },
       {
-        name: 'SASS', beg: 2019, end: STACK_NOW_YEAR, color: ['#ba75ae', '#d18ac5'],
+        name: 'SASS', beg: 2019, color: ['#ba75ae', '#d18ac5'],
       },
     ],
   },
@@ -23,10 +23,10 @@ export const STACK_GROUPS: StackGroup[] = [
     name: 'Languages',
     stacks: [
       {
-        name: 'JavaScript', beg: 2012, end: STACK_NOW_YEAR, color: ['#f5d142', '#ffe26e'],
+        name: 'JavaScript', beg: 2012, color: ['#f5d142', '#ffe26e'],
       },
       {
-        name: 'TypeScript', beg: 2017, end: STACK_NOW_YEAR, color: ['#267abf', '#4ca0e6'],
+        name: 'TypeScript', beg: 2017, color: ['#267abf', '#4ca0e6'],
       },
       {
         name: 'PHP', beg: 2013, end: 2018, color: ['#4f85b8', '#77a9d9'],
@@ -41,13 +41,13 @@ export const STACK_GROUPS: StackGroup[] = [
     name: 'Libraries',
     stacks: [
       {
-        name: 'React', beg: 2018, end: STACK_NOW_YEAR, color: ['#58d5e8', '#71e3f5'],
+        name: 'React', beg: 2018, color: ['#58d5e8', '#71e3f5'],
       },
       {
-        name: 'Solid.js', beg: 2021, end: STACK_NOW_YEAR, color: ['#4f85b8', '#77a9d9'],
+        name: 'Solid.js', beg: 2021, color: ['#4f85b8', '#77a9d9'],
       },
       {
-        name: 'Phaser', beg: 2021, end: STACK_NOW_YEAR, color: ['#73199A', '#922cc1'],
+        name: 'Phaser', beg: 2021, color: ['#73199A', '#922cc1'],
       },
       {
         name: 'Angular', beg: 2017, end: 2018, color: ['#d93654', '#ed516d'],

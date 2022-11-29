@@ -1,4 +1,5 @@
 import { Component } from 'solid-js';
+
 import { Job } from '~types';
 
 import './styles.scss';
