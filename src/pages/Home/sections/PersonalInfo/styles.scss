@@ -5,13 +5,29 @@ $logotype-height: 80px;
 
 section.personal-info {
   height: 100vh;
-  background: #fff url("./images/background.png") center top no-repeat;
-  background-size: auto 100vh;
   padding-bottom: 0;
   padding-top: 0;
+  background-color: #fff;
 
   > .wrapper {
     height: 100%;
+  }
+
+  > .parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center top;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+
+    &.geom-a {
+      background-image: url("./images/layer-geom-a.png");
+    }
+
+    &.geom-b {
+      background-image: url("./images/layer-geom-b.png");
+    }
   }
 
   .me {
@@ -64,8 +80,6 @@ section.personal-info {
 
 @include screen($media-size-l) {
   section.personal-info {
-    background-position: center 100px;
-
     .me {
       top: 8%;
       left: 50%;
@@ -75,7 +89,7 @@ section.personal-info {
 
     .content {
       max-width: 50%;
-      padding-top: 10%;
+      padding-top: 15%;
 
       .logotype {
         width: $logotype-width * 0.8;
@@ -101,6 +115,10 @@ section.personal-info {
 @include screen($media-size-s) {
   section.personal-info {
     height: auto;
+
+    > .parallax-layer {
+      display: none;
+    }
 
     .me {
       opacity: 0.15;

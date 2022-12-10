@@ -7,12 +7,10 @@ import { DesignItem } from './DesignItem';
 import './styles.scss';
 
 export const DesignPortfolio: Component = () => {
-  let refSection: HTMLElement;
-
   const [currentImage, setCurrentImage] = createSignal<number>(0);
 
   return (
-    <Section ref={refSection} class="design-portfolio" label="Design portfolio">
+    <Section class="design-portfolio" label="Design portfolio">
       <div class="images">
         <div class="current">
           <div class="image-wrapper">
