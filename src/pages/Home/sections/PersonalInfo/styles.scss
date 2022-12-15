@@ -18,7 +18,7 @@ section.personal-info {
     width: 100%;
     height: 100%;
     background-position: center top;
-    background-size: auto 100vh;
+    background-size: cover;
     background-repeat: no-repeat;
 
     &.geom-a {
@@ -42,7 +42,7 @@ section.personal-info {
   }
 
   .content {
-    padding-top: 7%;
+    padding-top: 7vh;
 
     .logotype {
       width: $logotype-width;
@@ -88,8 +88,7 @@ section.personal-info {
     }
 
     .content {
-      max-width: 50%;
-      padding-top: 15%;
+      max-width: 45%;
 
       .logotype {
         width: $logotype-width * 0.8;
