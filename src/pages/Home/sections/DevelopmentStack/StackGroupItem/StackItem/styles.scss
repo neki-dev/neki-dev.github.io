@@ -78,19 +78,26 @@
             background-color: #fff;
             top: 0;
             height: 14px;
-            left: 50%;
           }
 
           &.beg {
             left: 0;
             padding-left: 2px;
             transform: translateX(-50%);
+
+            &::after {
+              left: 50%;
+            }
           }
 
           &.end {
             right: 0;
             padding-right: 2px;
             transform: translateX(50%);
+
+            &::after {
+              right: 50%;
+            }
           }
         }
       }
