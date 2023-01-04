@@ -1,4 +1,4 @@
-import { PrintVariant } from '../../../types';
+import { PrintVariant } from '~types';
 
 import base_black from '../../base/black.png';
 import base_white from '../../base/white.png';
