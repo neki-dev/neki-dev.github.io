@@ -1,0 +1,49 @@
+@import "~style/defines";
+
+.model-item {
+  position: relative;
+  padding-left: 14px;
+  font-weight: bold;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #111;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &.active {
+    color: $color-main;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $gap-s;
+  }
+}
+
+@include screen($media-size-m) {
+  .model-item {
+    font-size: $font-size-s;
+    line-height: $font-size-s;
+  }
+}
+
+@include screen($media-size-s) {
+  .model-item {
+    font-size: $font-size-s;
+    line-height: $font-size-s;
+
+    &:not(:last-child) {
+      margin-bottom: $gap-xs;
+    }
+  }
+}

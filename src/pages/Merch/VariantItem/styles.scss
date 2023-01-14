@@ -1,0 +1,37 @@
+@import "~style/defines";
+
+.variant-item {
+  border: 1px solid #000;
+  width: 32px;
+  height: 32px;
+
+  &:not(:last-child) {
+    margin-right: $gap-xs;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    border-width: 4px;
+  }
+
+  > div {
+    height: 50%;
+  }
+}
+
+@include screen($media-size-m) {
+  .variant-item {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@include screen($media-size-s) {
+  .variant-item {
+    width: 22px;
+    height: 22px;
+  }
+}

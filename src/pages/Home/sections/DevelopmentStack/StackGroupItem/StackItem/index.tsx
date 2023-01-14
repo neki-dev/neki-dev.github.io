@@ -30,7 +30,6 @@ export const StackItem: Component<Stack> = (props) => {
           {(experienceYears() === 1) ? 'year' : 'years'}
           {' '}
           experience
-          {props.end && ', not actual'}
         </span>
       </div>
       <div class="timeline">

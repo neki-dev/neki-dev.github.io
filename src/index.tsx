@@ -1,16 +1,18 @@
 import { render } from 'solid-js/web';
-
-import { router } from '~utils';
+import { Router, Routes, Route } from '@solidjs/router';
 
 import '~style/index.scss';
 
 import { Home } from '~page/Home';
-import { MerchGallery } from '~page/MerchGallery';
-
-const application = router({
-  '*': <Home />,
-  'merch-gallery': <MerchGallery />,
-});
+import { Merch } from '~page/Merch';
 
 const root = document.getElementById('root');
-render(application, root);
+
+render(() => (
+  <Router>
+    <Routes>
+      <Route path="/" component={Home} />
+      <Route path="/merch" component={Merch} />
+    </Routes>
+  </Router>
+), root);

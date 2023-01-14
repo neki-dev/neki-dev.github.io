@@ -1,12 +1,21 @@
-export type PrintColor = {
+export type BaseMeta = {
   url: string
   hex: string
-  name?: string
+  name: string
+};
+
+export type PrintMeta = {
+  url: string
+  hex: string
+  name: string
+  source: string
+  size: number
+  offset: number
 };
 
 export type PrintVariant = {
-  base: PrintColor
-  print: PrintColor
+  base: BaseMeta
+  print: PrintMeta
 };
 
 export type Print = {

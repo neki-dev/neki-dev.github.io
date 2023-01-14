@@ -1,24 +1,24 @@
 import { PrintVariant } from '~types';
 
-import base_black from '../../base/black.png';
-import base_white from '../../base/white.png';
+import { baseBlack } from '../../base/black';
+import { baseWhite } from '../../base/white';
 
-import yellow from './yellow.png';
-import black from './black.png';
-import white from './white.png';
+import { printYellow } from './yellow';
+import { printWhite } from './white';
+import { printBlack } from './black';
 
 const print: PrintVariant[] = [
   {
-    base: { url: base_black, hex: '#000000', name: 'B' },
-    print: { url: yellow, hex: '#FFCD00', name: 'Y' },
+    base: baseBlack,
+    print: printYellow,
   },
   {
-    base: { url: base_black, hex: '#000000', name: 'B' },
-    print: { url: white, hex: '#FFFFFF', name: 'W' },
+    base: baseBlack,
+    print: printWhite,
   },
   {
-    base: { url: base_white, hex: '#FFFFFF', name: 'W' },
-    print: { url: black, hex: '#000000', name: 'B' },
+    base: baseWhite,
+    print: printBlack,
   },
 ];
 

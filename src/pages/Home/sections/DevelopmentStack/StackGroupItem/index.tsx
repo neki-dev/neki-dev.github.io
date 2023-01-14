@@ -8,7 +8,7 @@ import './styles.scss';
 
 export const StackGroupItem: Component<StackGroup> = (props) => (
   <div class="stack-group-item">
-    <div class="group-name">{props.name}</div>
+    {/* <div class="group-name">{props.name}</div> */}
     <Grid compact>
       <For each={props.stacks}>
         {StackItem}

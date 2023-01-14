@@ -1,0 +1,188 @@
+@import "~style/defines";
+
+section.merch {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $gap-l;
+
+  .selectors {
+    margin-right: $gap-xl;
+    padding-right: $gap-xl;
+    border-right: 1px solid #ddd;
+
+    .model-selector {
+      font-size: $font-size-m;
+    }
+
+    .variant {
+      margin-top: $gap-m;
+
+      .variant-selector {
+        display: flex;
+      }
+
+      .variant-meta {
+        margin-top: $gap-m;
+
+        .param {
+          &:not(:last-child) {
+            margin-bottom: $gap-xs;
+          }
+
+          .label {
+            color: #888;
+            text-transform: uppercase;
+            font-size: $font-size-xs;
+          }
+
+          .value {
+            font-size: $font-size-l;
+
+            span {
+              font-size: $font-size-s;
+            }
+          }
+        }
+      }
+    }
+
+    .download-source {
+      margin-top: $gap-l;
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid $color-second;
+        color: $color-second;
+        padding: $gap-s $gap-m;
+
+        &:hover {
+          background-color: $color-main;
+          border-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .preview {
+    .base {
+      width: 46vw;
+      height: 46vw * 0.97;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: background-image 0.1s ease-in;
+
+      .print {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+      }
+    }
+  }
+}
+
+@include screen($media-size-m) {
+  section.merch {
+    padding: $gap-m;
+
+    .selectors {
+      padding-right: $gap-l;
+      margin-right: $gap-l;
+
+      .variant .variant-meta .param {
+        .label {
+          font-size: $font-size-xxs;
+        }
+
+        .value {
+          font-size: $font-size-m;
+
+          span {
+            font-size: $font-size-xs;
+          }
+        }
+      }
+
+      .download-source a {
+        font-size: $font-size-xs;
+        padding: $gap-s $gap-m;
+      }
+    }
+  }
+}
+
+@include screen($media-size-s) {
+  section.merch {
+    flex-direction: column;
+
+    .selectors {
+      height: auto;
+      width: 100%;
+      display: flex;
+      padding: 0 0 $gap-l;
+      margin: 0 0 $gap-l;
+      border-right: 0;
+      border-bottom: 1px solid #ddd;
+      justify-content: space-around;
+
+      .variant {
+        margin: 0 $gap-m;
+
+        .variant-selector {
+          flex-shrink: 0;
+        }
+
+        .variant-meta {
+          display: flex;
+
+          .param {
+            &:not(:last-child) {
+              margin-bottom: 0;
+              margin-right: $gap-s;
+            }
+
+            .label {
+              font-size: $font-size-xxs;
+            }
+
+            .value {
+              font-size: $font-size-s;
+
+              span {
+                font-size: $font-size-xxs;
+              }
+            }
+          }
+        }
+      }
+
+      .download-source {
+        margin-top: 0;
+        position: fixed;
+        bottom: $gap-m;
+
+        a {
+          padding: $gap-xs $gap-m;
+          background-color: $color-main;
+          border-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+
+    .preview {
+      padding-bottom: $gap-xl;
+
+      .base {
+        width: 80vw;
+        height: 80vw * 0.97;
+      }
+    }
+  }
+}
