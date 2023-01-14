@@ -6,7 +6,7 @@ import { JobHistory } from './sections/JobHistory';
 import { Repositories } from './sections/Repositories';
 import { DesignPortfolio } from './sections/DesignPortfolio';
 
-export const Home: Component = () => (
+const Home: Component = () => (
     <>
       <PersonalInfo />
       <DevelopmentStack />
@@ -15,3 +15,5 @@ export const Home: Component = () => (
       <DesignPortfolio />
     </>
 );
+
+export default Home;

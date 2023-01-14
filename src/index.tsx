@@ -1,10 +1,11 @@
+import { lazy } from 'solid-js';
 import { render } from 'solid-js/web';
 import { Router, Routes, Route } from '@solidjs/router';
 
 import '~style/index.scss';
 
-import { Home } from '~page/Home';
-import { Merch } from '~page/Merch';
+const Home = lazy(() => import('~page/Home'));
+const Merch = lazy(() => import('~page/Merch'));
 
 const root = document.getElementById('root');
 

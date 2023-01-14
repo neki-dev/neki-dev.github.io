@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "app/",
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "target": "esnext",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
@@ -15,7 +15,6 @@
       "~style/*": ["./src/styles/*"],
       "~page/*": ["./src/pages/*"],
       "~component/*": ["./src/components/*"],
-      "~utils": ["./src/utils/index.ts"],
       "~types": ["./src/types/index.ts"],
       "~hooks": ["./src/hooks/index.ts"],
       "~resources": ["./src/resources/index.ts"],

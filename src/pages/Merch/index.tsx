@@ -6,7 +6,7 @@ import { VariantItem } from './VariantItem';
 
 import './styles.scss';
 
-export const Merch: Component = () => {
+const Merch: Component = () => {
   const [model, setModel] = createSignal<number>(0);
   const [variant, setVariant] = createSignal<number>(0);
 
@@ -79,3 +79,5 @@ export const Merch: Component = () => {
     </section>
   );
 };
+
+export default Merch;
