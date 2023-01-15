@@ -15,19 +15,30 @@ section {
   }
 
   .section-label {
+    position: relative;
     margin-bottom: 9%;
-    border-bottom: 1px solid $color-light;
-    padding-bottom: 3%;
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 16px;
+      bottom: -2px;
+      width: 100%;
+      background-color: rgba($color-main, 0.2);
+    }
 
     h4 {
+      position: relative;
       display: block;
       font-size: $font-size-xxl;
       line-height: $font-size-xxl;
       color: $color-dark-dim;
       text-transform: uppercase;
-      transition: all 0.5s ease-out;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
       transform: translateY(125%);
       opacity: 0;
+      z-index: 2;
 
       &.animate {
         transform: translateY(0);
@@ -38,22 +49,43 @@ section {
 }
 
 @include screen($media-size-l) {
-  section .section-label h4 {
-    font-size: $font-size-xxl * 0.9;
-    line-height: $font-size-xxl * 0.9;
+  section .section-label {
+    &::after {
+      height: 14px;
+      bottom: -2px;
+    }
+
+    h4 {
+      font-size: $font-size-xxl * 0.9;
+      line-height: $font-size-xxl * 0.9;
+    }
   }
 }
 
 @include screen($media-size-m) {
-  section .section-label h4 {
-    font-size: $font-size-xxl * 0.8;
-    line-height: $font-size-xxl * 0.8;
+  section .section-label {
+    &::after {
+      height: 12px;
+      bottom: -2px;
+    }
+
+    h4 {
+      font-size: $font-size-xxl * 0.8;
+      line-height: $font-size-xxl * 0.8;
+    }
   }
 }
 
 @include screen($media-size-s) {
-  section .section-label h4 {
-    font-size: $font-size-xxl * 0.7;
-    line-height: $font-size-xxl * 0.7;
+  section .section-label {
+    &::after {
+      height: 10px;
+      bottom: -1px;
+    }
+
+    h4 {
+      font-size: $font-size-xxl * 0.7;
+      line-height: $font-size-xxl * 0.7;
+    }
   }
 }

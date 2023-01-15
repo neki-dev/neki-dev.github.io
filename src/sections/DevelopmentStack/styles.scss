@@ -4,7 +4,9 @@ section.stack-timeline {
   background-color: #081422;
 
   .section-label {
-    border-color: #28394e;
+    &::after {
+      background-color: rgba($color-main, 0.4);
+    }
 
     h4 {
       color: #fff;

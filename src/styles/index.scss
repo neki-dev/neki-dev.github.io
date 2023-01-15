@@ -13,6 +13,11 @@
   }
 }
 
+::selection {
+  color: #fff;
+  background: #000;
+}
+
 body {
   background-color: #fff;
   color: $color-dark;

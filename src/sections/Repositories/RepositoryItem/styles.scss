@@ -39,14 +39,6 @@
       font-size: $font-size-s;
       line-height: $font-size-s + 0.5pt;
       margin-bottom: $gap-m;
-
-      > span {
-        display: block;
-        text-transform: uppercase;
-        margin-top: 5px;
-        font-size: $font-size-xs;
-        opacity: 0.75;
-      }
     }
 
     .meta {
