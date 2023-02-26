@@ -17,6 +17,7 @@ export function useScrollProgress(
 
     if (offset >= 0 && offset <= height) {
       const progress = offset / height;
+
       callback(progress);
     }
   }

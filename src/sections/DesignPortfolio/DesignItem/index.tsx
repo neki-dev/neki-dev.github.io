@@ -17,6 +17,7 @@ export const DesignItem: Component<Props> = (props) => {
 
   onMount(() => {
     const image = new Image();
+
     image.onload = () => {
       setLoaded(true);
     };

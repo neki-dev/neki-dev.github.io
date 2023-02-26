@@ -6,6 +6,7 @@ export function useCatchDisplay(
 ) {
   function checkDisplay(): boolean {
     const element = ref();
+
     if (!element) {
       return false;
     }
