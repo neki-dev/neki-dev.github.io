@@ -11,9 +11,6 @@ export default defineConfig({
     SVGInjectPlugin(),
     checkerPlugin({
       typescript: true,
-      eslint: {
-        lintCommand: 'eslint **/*.{js,ts,tsx} --ignore-path ../.gitignore',
-      },
     }),
   ],
   root: './src',
