@@ -8,8 +8,8 @@ import { JobItem } from './JobItem';
 import './styles.scss';
 
 export const JobHistory: Component = () => {
-  let refSection: HTMLElement;
-  let refContent: HTMLDivElement;
+  let refSection!: HTMLElement;
+  let refContent!: HTMLDivElement;
 
   useScrollProgress(() => refSection, (progress: number) => {
     refContent.style.transform = `translateY(${progress * 200}px)`;

@@ -15,9 +15,9 @@ const parallaxLayers = {
 
 export const PersonalInfo: Component = () => {
   const refLayers: Record<string, HTMLElement> = {};
-  let refSection: HTMLElement;
-  let refMe: HTMLDivElement;
-  let refContent: HTMLDivElement;
+  let refSection!: HTMLElement;
+  let refMe!: HTMLDivElement;
+  let refContent!: HTMLDivElement;
 
   useScrollProgress(() => refSection, (progress: number) => {
     refMe.style.transform = `translateY(${progress * 150}px)`;

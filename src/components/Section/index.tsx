@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const Section: Component<Props> = (props) => {
-  let refLabel: HTMLHeadingElement;
+  let refLabel!: HTMLHeadingElement;
 
   useCatchDisplay(() => refLabel, () => {
     refLabel.classList.add('animate');

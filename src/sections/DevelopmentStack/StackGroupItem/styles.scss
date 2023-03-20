@@ -1,36 +1,11 @@
 @import "~style/defines";
 
-.stack-group-item {
-  // .group-name {
-  //   margin-bottom: $gap-m;
-  //   font-size: $font-size-m;
-  //   line-height: $font-size-m;
-  //   font-weight: 100;
-  //   color: #fff;
-  //   position: relative;
-  //   padding-left: 20px;
-
-  //   &::before {
-  //     position: absolute;
-  //     left: 0;
-  //     width: 8px;
-  //     height: 8px;
-  //     top: 50%;
-  //     transform: translateY(-50%);
-  //     background-color: #fff;
-  //     content: "";
-  //   }
-  // }
-
-  &:not(:last-child) {
-    margin-bottom: $gap-l;
-  }
+.stack-group-item:not(:last-child) {
+  margin-bottom: $gap-l;
 }
 
 @include screen($media-size-l) {
-  .stack-group-item {
-    &:not(:last-child) {
-      margin-bottom: 10%;
-    }
+  .stack-group-item:not(:last-child) {
+    margin-bottom: 10%;
   }
 }

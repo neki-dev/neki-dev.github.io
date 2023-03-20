@@ -19,7 +19,7 @@ import img_e184badc2e from './e184badc2e.png';
 import img_7g3b60na78 from './7g3b60na78.png';
 import img_7a1b19caf0 from './7a1b19caf0.png';
 
-export const DESIGNS: [string, string?][] = [
+export const DESIGNS: [string, string][] = [
   [img_0e5b12acb3, 'HTR'],
   [img_b34748daf3, '2113'],
   [img_06a28f41f9, 'Net Bird'],

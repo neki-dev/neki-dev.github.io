@@ -8,7 +8,11 @@ import { JobHistory } from './sections/JobHistory';
 import { Repositories } from './sections/Repositories';
 import { DesignPortfolio } from './sections/DesignPortfolio';
 
-const root = document.getElementById('root');
+const app = document.getElementById('root');
+
+if (!app) {
+  throw Error('Undefined App element');
+}
 
 render(() => (
   <>
@@ -18,4 +22,4 @@ render(() => (
     <Repositories />
     <DesignPortfolio />
   </>
-), root);
+), app);

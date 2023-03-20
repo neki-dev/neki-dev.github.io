@@ -12,7 +12,7 @@ export default defineConfig({
     checkerPlugin({
       typescript: true,
       eslint: {
-        lintCommand: 'eslint "**/*.{js,ts,tsx}" --ignore-path ../.gitignore',
+        lintCommand: 'eslint **/*.{js,ts,tsx} --ignore-path ../.gitignore',
       },
     }),
   ],

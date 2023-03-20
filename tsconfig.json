@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "outDir": "app/",
-    "noImplicitAny": true,
     "module": "esnext",
     "target": "esnext",
+    "moduleResolution": "node",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
     "types": ["vite/client"],
     "paths": {
       "~style/*": ["./src/styles/*"],
