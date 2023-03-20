@@ -2,12 +2,19 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import SVGInjectPlugin from 'vite-plugin-svg-inject';
+import checkerPlugin from 'vite-plugin-checker';
 import alias from 'alias-reuse';
 
 export default defineConfig({
   plugins: [
     solidPlugin(),
     SVGInjectPlugin(),
+    checkerPlugin({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "**/*.{js,ts,tsx}" --ignore-path ../.gitignore',
+      },
+    }),
   ],
   root: './src',
   build: {
@@ -16,8 +23,6 @@ export default defineConfig({
     outDir: '../dist',
   },
   resolve: {
-    alias: alias(__dirname)
-      .fromTsconfig()
-      .toVite(),
+    alias: alias.fromFile(__dirname, './tsconfig.json').toVite(),
   },
 });
