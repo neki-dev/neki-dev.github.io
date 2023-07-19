@@ -21,15 +21,35 @@
       bottom: 0;
     }
 
-    .name {
+    .head {
       margin-bottom: $gap-m;
-      color: $color-main;
-      font-weight: bold;
-      font-size: $font-size-l;
-      line-height: $font-size-l;
-      text-transform: lowercase;
-      text-decoration: none;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+
+      .sign {
+        font-size: $font-size-l;
+        line-height: $font-size-l;
+        margin-right: $gap-s;
+      }
+
+      .info {
+        .type {
+          color: $color-second;
+          font-size: $font-size-xs;
+          line-height: $font-size-xs;
+          text-transform: uppercase;
+          margin-bottom: 2px;
+        }
+
+        .name {
+          color: $color-main;
+          font-weight: bold;
+          font-size: $font-size-s;
+          line-height: $font-size-s;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
     }
 
     .description {

@@ -18,6 +18,7 @@ export type Repository = {
   forks: number
   likes: number
   dateCreate: string
+  type: string
 };
 
 export type UnformattedPackageDownloads = {

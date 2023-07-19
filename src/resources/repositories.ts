@@ -7,6 +7,13 @@ const ACCOUNT_USERNAME = 'neki-dev';
 const EMOJI_IGNORE = ['🥷🏼', '⛔'];
 const EMOJI_REGEX = emojiRegex();
 
+const TYPE_BY_SIGN: Record<string, string> = {
+  '🎲': 'Game',
+  '🧩': 'Library',
+  '⚙️': 'Utils',
+  '📟': 'Server',
+};
+
 function parseDate(date: string): string {
   const [, month, , year] = new Date(date).toDateString().split(' ');
 
@@ -14,17 +21,19 @@ function parseDate(date: string): string {
 }
 
 function parseRepository(item: UnformattedRepository): Repository {
-  const signs = item.description.match(EMOJI_REGEX) || [];
+  const [sign] = item.description.match(EMOJI_REGEX) || [];
+  const ignored = EMOJI_IGNORE.some((emoji) => item.description.includes(emoji));
 
   return {
     name: item.name,
     lang: item.language?.replace(/[a-z]+/g, ''),
-    sign: signs[0],
+    sign,
     description: item.description.replaceAll(EMOJI_REGEX, ''),
     forks: item.forks_count,
     likes: item.stargazers_count,
     dateCreate: parseDate(item.created_at),
-    ignored: signs.some((sign) => EMOJI_IGNORE.includes(sign)),
+    ignored,
+    type: (sign && TYPE_BY_SIGN[sign]) ?? 'Untyped',
   };
 }
 
