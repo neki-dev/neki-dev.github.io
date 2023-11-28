@@ -50,7 +50,7 @@ export const PersonalInfo: Component = () => {
         <div class="logotype" />
         <div class="name">
           <h1>Nikita Galadiy</h1>
-          <h2>Web Developing &&nbsp;Design</h2>
+          <h2>The&nbsp;Web&nbsp;Developer</h2>
         </div>
         <div class="contacts">
           <For each={SOCIAL_CONTACTS}>
