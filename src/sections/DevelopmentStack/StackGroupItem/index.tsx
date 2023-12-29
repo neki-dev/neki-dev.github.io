@@ -8,10 +8,8 @@ import './styles.scss';
 
 export const StackGroupItem: Component<StackGroup> = (props) => (
   <div class="stack-group-item">
-    <Grid compact>
-      <For each={props.stacks}>
-        {StackItem}
-      </For>
+    <Grid size="large" compact>
+      <For each={props.stacks}>{StackItem}</For>
     </Grid>
   </div>
 );

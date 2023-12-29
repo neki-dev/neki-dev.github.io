@@ -4,14 +4,13 @@ import cn from 'classnames';
 import './styles.scss';
 
 type Props = {
-  large?: boolean
+  size: 'small' | 'medium' | 'large'
   compact?: boolean
   children: JSX.Element
 };
 
 export const Grid: Component<Props> = (props) => (
-  <div class={cn('grid', {
-    large: props.large,
+  <div class={cn('grid', props.size, {
     compact: props.compact,
   })}>
     {props.children}

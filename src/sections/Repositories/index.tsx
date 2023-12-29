@@ -13,8 +13,8 @@ export const Repositories: Component = () => {
   const [repositories] = createResource<Repository[]>(fetchRepositories);
 
   return (
-    <Section class="repositories" label="Public Repositories">
-      <Grid large>
+    <Section class="repositories" label="Repositories">
+      <Grid size='medium'>
         { repositories() ? (
           <For each={repositories()}>
             {RepositoryItem}
