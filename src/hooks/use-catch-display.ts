@@ -24,7 +24,7 @@ export function useCatchDisplay(
   }
 
   onMount(() => {
-    // Promise is needed for waiting mount ref
+    // Promise needs to waiting mount ref
     Promise.resolve().then(() => {
       if (checkDisplay()) {
         callback();

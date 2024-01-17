@@ -3,10 +3,8 @@ import { Repository, UnformattedRepository } from '~types';
 import { fetchPackagesDownloads } from './packages-downloads';
 
 const ACCOUNT_USERNAME = 'neki-dev';
-
 const EMOJI_IGNORE = ['🥷🏼', '⛔'];
 const EMOJI_REGEX = emojiRegex();
-
 const TYPE_BY_SIGN: Record<string, string> = {
   '🎲': 'Game',
   '🧩': 'Library',
@@ -45,7 +43,7 @@ export async function fetchRepositories(): Promise<Repository[]> {
         .filter((repository) => !repository.fork)
         .map(parseRepository)
         .filter((repository) => !repository.ignored)
-        .sort((a, b) => ((b.likes * 2 + b.forks) - (a.likes * 2 + a.forks)));
+        .sort((a, b) => (b.likes * 2 + b.forks) - (a.likes * 2 + a.forks));
 
       const downloads = await fetchPackagesDownloads(repositories);
 
