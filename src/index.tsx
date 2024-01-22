@@ -2,11 +2,11 @@ import { render } from 'solid-js/web';
 
 import '~style/index.scss';
 
-import { DevelopmentStack } from './sections/DevelopmentStack';
-import { PersonalInfo } from './sections/PersonalInfo';
-import { JobHistory } from './sections/JobHistory';
-import { Repositories } from './sections/Repositories';
-import { DesignPortfolio } from './sections/DesignPortfolio';
+import { SectionStack } from './sections/stack';
+import { SectionHead } from './sections/head';
+import { SectionJobs } from './sections/jobs';
+import { SectionRepositories } from './sections/repositories';
+import { SectionDesign } from './sections/design';
 
 const app = document.getElementById('root');
 
@@ -16,10 +16,10 @@ if (!app) {
 
 render(() => (
   <>
-    <PersonalInfo />
-    <DevelopmentStack />
-    <JobHistory />
-    <Repositories />
-    <DesignPortfolio />
+    <SectionHead />
+    <SectionStack />
+    <SectionJobs />
+    <SectionRepositories />
+    <SectionDesign />
   </>
 ), app);

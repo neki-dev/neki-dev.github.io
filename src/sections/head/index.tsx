@@ -3,12 +3,12 @@ import cn from 'classnames';
 
 import { useScrollProgress } from '~hooks';
 import { SOCIAL_CONTACTS } from '~data';
-import { Section } from '~component/Section';
-import { ContactItem } from './ContactItem';
+import { Section } from '~component/section';
+import { ContactItem } from './contact';
 
 import './styles.scss';
 
-export const PersonalInfo: Component = () => {
+export const SectionHead: Component = () => {
   const refLayers: Record<string, HTMLElement> = {};
   let refSection!: HTMLElement;
   let refMe!: HTMLDivElement;

@@ -1,12 +1,12 @@
 import { Component, For } from 'solid-js';
 
 import { STACK_GROUPS } from '~data';
-import { Section } from '~component/Section';
-import { StackGroupItem } from './StackGroupItem';
+import { Section } from '~component/section';
+import { StackGroupItem } from './group';
 
 import './styles.scss';
 
-export const DevelopmentStack: Component = () => (
+export const SectionStack: Component = () => (
   <Section class="stack-timeline" label="Development Stack">
     <For each={STACK_GROUPS}>
       {StackGroupItem}

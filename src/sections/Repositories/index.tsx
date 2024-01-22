@@ -2,14 +2,14 @@ import { Component, createResource, For } from 'solid-js';
 
 import { Repository } from '~types';
 import { fetchRepositories } from '~resources';
-import { Section } from '~component/Section';
-import { Skeleton } from '~component/Skeleton';
-import { Grid } from '~component/Grid';
-import { RepositoryItem } from './RepositoryItem';
+import { Section } from '~component/section';
+import { Skeleton } from '~component/skeleton';
+import { Grid } from '~component/grid';
+import { RepositoryItem } from './item';
 
 import './styles.scss';
 
-export const Repositories: Component = () => {
+export const SectionRepositories: Component = () => {
   const [repositories] = createResource<Repository[]>(fetchRepositories);
 
   return (
