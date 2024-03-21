@@ -2,6 +2,7 @@
 import alias from 'alias-reuse';
 import path from 'path';
 import { defineConfig } from 'vite';
+// eslint-disable-next-line import/default
 import checkerPlugin from 'vite-plugin-checker';
 import solidPlugin from 'vite-plugin-solid';
 import SVGInjectPlugin from 'vite-plugin-svg-inject';
@@ -17,7 +18,6 @@ export default defineConfig({
   root: './src',
   build: {
     target: 'esnext',
-    polyfillDynamicImport: false,
     outDir: '../dist',
   },
   resolve: {
