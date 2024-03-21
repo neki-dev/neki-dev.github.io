@@ -58,14 +58,15 @@ export const STACK_GROUPS: StackGroup[] = [
         color: ['#58d5e8', '#71e3f5'],
       },
       {
-        name: 'Solid.js',
-        beg: 2021,
-        color: ['#4f85b8', '#77a9d9'],
-      },
-      {
         name: 'Three.js',
         beg: 2022,
         color: ['#73199A', '#922cc1'],
+      },
+      {
+        name: 'Solid.js',
+        beg: 2021,
+        end: 2023,
+        color: ['#4f85b8', '#77a9d9'],
       },
       {
         name: 'Angular',
