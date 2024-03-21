@@ -67,8 +67,8 @@ export const STACK_GROUPS: StackGroup[] = [
         color: ['#4f85b8', '#77a9d9'],
       },
       {
-        name: 'Phaser',
-        beg: 2021,
+        name: 'Three.js',
+        beg: 2022,
         color: ['#73199A', '#922cc1'],
       },
       {
