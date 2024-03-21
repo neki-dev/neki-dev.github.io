@@ -32,10 +32,7 @@ section.personal-info {
 
   .me {
     position: absolute;
-    left: 40%;
-    right: 0;
-    bottom: 0;
-    top: 12%;
+    inset: 12% 0 0 40%;
     background: url("./images/me.png") left top no-repeat;
     background-size: 100%;
     pointer-events: none;

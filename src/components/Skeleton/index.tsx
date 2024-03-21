@@ -1,5 +1,7 @@
-import { Component, createMemo, For } from 'solid-js';
 import cn from 'classnames';
+import { createMemo, For } from 'solid-js';
+
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

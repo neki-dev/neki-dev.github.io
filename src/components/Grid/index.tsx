@@ -1,5 +1,6 @@
-import { JSX, Component } from 'solid-js';
 import cn from 'classnames';
+
+import type { JSX, Component } from 'solid-js';
 
 import './styles.scss';
 

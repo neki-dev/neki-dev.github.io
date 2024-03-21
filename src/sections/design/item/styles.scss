@@ -7,10 +7,7 @@
   &::after {
     position: absolute;
     content: "";
-    left: -3px;
-    right: -3px;
-    top: -3px;
-    bottom: -3px;
+    inset: -3px;
     border: 6px solid $color-second;
     z-index: 2;
     pointer-events: none;
