@@ -1,9 +1,11 @@
-import { Component, For } from 'solid-js';
+import { For } from 'solid-js';
 
-import { useScrollProgress } from '~hooks';
-import { JOB_HISTORY, JOB_TOTAL_EXPERIENCE } from '~data';
-import { Section } from '~component/section';
+import { JOB_HISTORY, JOB_TOTAL_EXPERIENCE } from './const';
 import { JobItem } from './item';
+import { Section } from '../../components/section';
+import { useScrollProgress } from '../../hooks';
+
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

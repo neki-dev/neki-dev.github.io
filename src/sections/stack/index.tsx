@@ -1,8 +1,10 @@
-import { Component, For } from 'solid-js';
+import { For } from 'solid-js';
 
-import { STACK_GROUPS } from '~data';
-import { Section } from '~component/section';
+import { STACK_GROUPS } from './const';
 import { StackGroupItem } from './group';
+import { Section } from '../../components/section';
+
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

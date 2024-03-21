@@ -1,6 +1,9 @@
 import emojiRegex from 'emoji-regex';
-import { Repository, UnformattedRepository } from '~types';
+
 import { fetchPackagesDownloads } from './packages-downloads';
+
+import type { UnformattedRepository } from './types';
+import type { Repository } from '../item/types';
 
 const ACCOUNT_USERNAME = 'neki-dev';
 const EMOJI_IGNORE = ['🥷🏼', '⛔'];

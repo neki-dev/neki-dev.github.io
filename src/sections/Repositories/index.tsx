@@ -1,11 +1,13 @@
-import { Component, createResource, For } from 'solid-js';
+import { createResource, For } from 'solid-js';
 
-import { Repository } from '~types';
-import { fetchRepositories } from '~resources';
-import { Section } from '~component/section';
-import { Skeleton } from '~component/skeleton';
-import { Grid } from '~component/grid';
 import { RepositoryItem } from './item';
+import { fetchRepositories } from './resources';
+import { Grid } from '../../components/grid';
+import { Section } from '../../components/section';
+import { Skeleton } from '../../components/skeleton';
+
+import type { Repository } from './item/types';
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

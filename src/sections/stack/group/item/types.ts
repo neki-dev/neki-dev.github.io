@@ -4,8 +4,3 @@ export type Stack = {
   end?: number
   color: [string, string]
 };
-
-export type StackGroup = {
-  name: string
-  stacks: Stack[]
-};

@@ -1,6 +1,5 @@
-import { Component } from 'solid-js';
-
-import { Job } from '~types';
+import type { Job } from './types';
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

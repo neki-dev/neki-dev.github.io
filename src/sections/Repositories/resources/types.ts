@@ -8,19 +8,6 @@ export type UnformattedRepository = {
   created_at: string
 };
 
-export type Repository = {
-  name: string
-  description: string
-  sign?: string
-  ignored?: boolean
-  lang?: string
-  downloads?: number
-  forks: number
-  likes: number
-  dateCreate: string
-  type: string
-};
-
 export type UnformattedPackageDownloads = {
   package: string
   downloads: Array<{
@@ -29,6 +16,3 @@ export type UnformattedPackageDownloads = {
   }>
 };
 
-export type PackageDownloads = {
-  [key in string]: number
-};

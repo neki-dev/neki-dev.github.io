@@ -1,11 +1,12 @@
-import { Component, createSignal, Index } from 'solid-js';
+import { createSignal, Index } from 'solid-js';
 
-import { DESIGNS } from '~data';
-import { Section } from '~component/section';
+import { DESIGNS } from './data';
 import { DesignItem } from './item';
+import { Section } from '../../components/section';
+
+import type { Component } from 'solid-js';
 
 import './styles.scss';
-
 export const SectionDesign: Component = () => {
   const [currentImage, setCurrentImage] = createSignal<number>(0);
 

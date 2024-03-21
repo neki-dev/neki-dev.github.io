@@ -1,8 +1,10 @@
-import { Component, createMemo } from 'solid-js';
 import cn from 'classnames';
+import { createMemo } from 'solid-js';
 
-import { STACK_NOW_YEAR, STACK_BEG_YEAR, STACK_SIZE } from '~data';
-import { Stack } from '~types';
+import { STACK_BEG_YEAR, STACK_SIZE, STACK_NOW_YEAR } from './const';
+
+import type { Stack } from './types';
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

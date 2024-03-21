@@ -2,11 +2,11 @@ import { render } from 'solid-js/web';
 
 import '~style/index.scss';
 
-import { SectionStack } from './sections/stack';
+import { SectionDesign } from './sections/design';
 import { SectionHead } from './sections/head';
 import { SectionJobs } from './sections/jobs';
 import { SectionRepositories } from './sections/repositories';
-import { SectionDesign } from './sections/design';
+import { SectionStack } from './sections/stack';
 
 const app = document.getElementById('root');
 

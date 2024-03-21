@@ -1,10 +1,12 @@
-import { Component, For } from 'solid-js';
 import cn from 'classnames';
+import { For } from 'solid-js';
 
-import { useScrollProgress } from '~hooks';
-import { SOCIAL_CONTACTS } from '~data';
-import { Section } from '~component/section';
+import { SOCIAL_CONTACTS } from './const';
 import { ContactItem } from './contact';
+import { Section } from '../../components/section';
+import { useScrollProgress } from '../../hooks';
+
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

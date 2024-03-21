@@ -1,11 +1,10 @@
-import { Component } from 'solid-js';
-
-import { Repository } from '~types';
-import { ACCOUNT_USERNAME } from '~data';
-
+import { ACCOUNT_USERNAME } from './const';
+import IconDownload from './images/icons/download.svg';
 import IconFork from './images/icons/fork.svg';
 import IconLike from './images/icons/like.svg';
-import IconDownload from './images/icons/download.svg';
+
+import type { Repository } from './types';
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

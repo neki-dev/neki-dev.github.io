@@ -1,4 +1,4 @@
-import { Contact } from '~types';
+import type { Contact } from './contact/types';
 
 export const SOCIAL_CONTACTS: Contact[] = [
   { name: 'Telegram', link: 'https://telegram.me/neki_me' },

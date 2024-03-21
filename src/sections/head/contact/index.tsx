@@ -1,7 +1,7 @@
-import { Component } from 'solid-js';
 import cn from 'classnames';
 
-import { Contact } from '~types';
+import type { Contact } from './types';
+import type { Component } from 'solid-js';
 
 import './styles.scss';
 

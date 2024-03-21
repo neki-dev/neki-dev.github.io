@@ -1,6 +1,6 @@
-import { JSX, Component } from 'solid-js';
+import { useCatchDisplay } from '../../hooks';
 
-import { useCatchDisplay } from '~hooks';
+import type { JSX, Component } from 'solid-js';
 
 import './styles.scss';
 

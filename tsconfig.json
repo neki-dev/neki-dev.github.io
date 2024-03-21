@@ -11,14 +11,8 @@
     "esModuleInterop": true,
     "strict": true,
     "types": ["vite/client"],
-    "paths": {
-      "~style/*": ["./src/styles/*"],
-      "~page/*": ["./src/pages/*"],
-      "~component/*": ["./src/components/*"],
-      "~types": ["./src/types/index.ts"],
-      "~hooks": ["./src/hooks/index.ts"],
-      "~resources": ["./src/resources/index.ts"],
-      "~data": ["./src/data/index.ts"]
-    }
-  }
+  },
+  "include": [
+    "./src"
+  ]
 }

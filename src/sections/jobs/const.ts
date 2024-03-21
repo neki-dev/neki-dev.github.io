@@ -1,4 +1,4 @@
-import { Job } from '~types';
+import type { Job } from "./item/types";
 
 const JOB_START_TIMESTAMP = 1404172800;
 

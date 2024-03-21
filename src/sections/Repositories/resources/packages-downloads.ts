@@ -1,4 +1,5 @@
-import { PackageDownloads, Repository, UnformattedPackageDownloads } from '~types';
+import type { UnformattedPackageDownloads } from "./types";
+import type { PackageDownloads, Repository } from "../item/types";
 
 export async function fetchPackagesDownloads(
   repositories: Repository[],
